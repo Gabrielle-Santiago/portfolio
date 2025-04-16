@@ -1,0 +1,65 @@
+/* From Uiverse.io by adamgiebl */ 
+.cardServ {
+    width: 20em;
+    height: 20em;
+    border-radius: 20px;
+    padding: 5px;
+    box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
+    background-image: linear-gradient(144deg, #43c2e9, #103e83 50%, #071f55);
+    margin-bottom: 10px;
+}
+
+.card-servico {
+background: rgb(5, 6, 45);
+border-radius: 17px;
+width: 100%;
+height: 90%;
+}
+
+.title4 {
+text-align: center;
+padding: 10px;
+font-size: 16px;
+}
+
+.desService {
+text-align: left;
+padding: 10px;
+font-size: 14px;
+}
+  
+@media (max-width: 768px) {
+    .cardServ {
+        width: 50%;
+        height: auto;
+        margin: 10px auto;
+    }
+
+    .title4 {
+        font-size: 18px;
+    }
+
+    .desService {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .card {
+        height: 65vh;
+        width: 70vh;
+    }
+    .cardServ {
+        width: 95%;
+        padding: 8px;
+    }
+
+    .title4 {
+        font-size: 16px;
+    }
+
+    .desService {
+        font-size: 14px;
+    }
+}
+  
