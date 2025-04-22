@@ -1,60 +1,139 @@
-@font-face {
-    font-family: BLKCHCRY;
-    src: url("/portfolio/src/static/font/blanck_chancery/BLKCHCRY.TTF");
+body {
+  background-color: #07021f;
+  color: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+
+
+nav {
+  background-color: #090422;
+  font-size: 14px;
+  padding: 10px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-evenly;
+  position: relative;
+  gap: 20px;
+  padding: 0;
+  text-transform: uppercase;
+}
+
+nav ul li a {
+  color: #cccaca;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+nav ul li a:hover {
+  color: #d60730;
+}
+
+h1 {
+  text-align: center;
+  margin: 30px 0 20px 0;
+  font-size: 36px;
+}
+
+h2 {
+  margin: 40px 20px 10px 20px;
+  font-size: 28px;
+  color: #dad6d6;
+}
+
+p {
+  margin: 0 20px 30px 20px;
+  line-height: 1.6;
+}
+
+.hardSkills {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 20px;
+  overflow-x: auto;
+  padding: 10px 20px;
+}
+
+.card {
+  background: #3286ab;
+  background: radial-gradient(circle, rgba(50, 134, 171, 1) 0%, rgba(38, 94, 158, 1) 26%, rgba(23, 54, 114, 1) 52%, rgba(14, 25, 94, 1) 75%, rgba(14, 16, 77, 1) 100%);
+  border: 2px solid #1a1a2e;
+  border-radius: 12px;
+  padding: 20px;
+  width: 140px;
+  height: 160px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s ease;
+  flex-shrink: 0;
+}
+
+.card:hover {
+  border-color: #6bcde6;
+}
+
+.card img {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 10px;
+}
+
+.logosInd {
+  width: 50px;
+  height: 50px;
+}
+
+.softSkills {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  margin: 20px;
+}
+
+.cardSoft {
+  background: #3286ab;
+  background: radial-gradient(circle, rgba(50, 134, 171, 1) 0%, rgba(38, 94, 158, 1) 26%, rgba(23, 54, 114, 1) 52%, rgba(14, 25, 94, 1) 75%, rgba(14, 16, 77, 1) 100%);
+  border: 2px solid #1a1a2e;
+  border-radius: 12px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s ease;
+  height: 80px;
+  text-align: center;
+}
+
+.cardSoft:hover {
+  border-color: #6bcde6;
+}
+
+@media (max-width: 768px) {
+  .hardSkills {
+      justify-content: center;
   }
-  
-  @font-face {
-    font-family: Copeland;
-    src: url("/portfolio/src/static/font/copeland/Copeland.otf");
+
+  .card {
+      width: 120px;
+      height: 140px;
   }
-  
-  :root {
-    --side: 420px;
-    --l: 330px;
+
+  .softSkills {
+      grid-template-columns: 1fr;
   }
-  
-  html, body {
-    background: #04011b;
-    color: #ececec;
-    width: 100%;
-    height: 100%;
-    font-family: Copeland, "arial";
-    letter-spacing: 2px;
+}
+
+@media (max-width: 480px) {
+  .card {
+      width: 100px;
+      height: 120px;
   }
-  
-  main {
-    font-size: 15px;
-  }
-  
-  h2, h3 {
-    color: #e4e2e2;
-    font-size: 25px;
-  }
-  
-  .titles {
-    font-family: BLKCHCRY, "arial";
-    font-size: 25px;
-    text-align: center;
-    margin-top: 250px;
-    z-index: 10;
-    position: relative;
-    padding: 0;
-  }
-  
-  .links {
-    padding: 0;
-    margin-top: 20px;
-    display: flex;
-    justify-content: space-evenly;
-    position: relative;
-    z-index: 10;
-  }
-  
-  a {
-    color: #ececec;
-    text-decoration: none;
-  }
-  
-  a:hover {
-    color: #d60730;
-  }
+}

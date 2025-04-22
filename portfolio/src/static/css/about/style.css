@@ -1,5 +1,6 @@
 body {
     background-color: #04011b;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 main {
@@ -35,7 +36,7 @@ p {
 }
 
 strong {
-    color: #d60730;
+    color: #1dbba7;
 }
 
 .links {
