@@ -1,0 +1,60 @@
+@font-face {
+    font-family: BLKCHCRY;
+    src: url("/portfolio/src/static/font/blanck_chancery/BLKCHCRY.TTF");
+  }
+  
+  @font-face {
+    font-family: Copeland;
+    src: url("/portfolio/src/static/font/copeland/Copeland.otf");
+  }
+  
+  :root {
+    --side: 420px;
+    --l: 330px;
+  }
+  
+  html, body {
+    background: #04011b;
+    color: #ececec;
+    width: 100%;
+    height: 100%;
+    font-family: Copeland, "arial";
+    letter-spacing: 2px;
+  }
+  
+  main {
+    font-size: 15px;
+  }
+  
+  h2, h3 {
+    color: #e4e2e2;
+    font-size: 25px;
+  }
+  
+  .titles {
+    font-family: BLKCHCRY, "arial";
+    font-size: 25px;
+    text-align: center;
+    margin-top: 250px;
+    z-index: 10;
+    position: relative;
+    padding: 0;
+  }
+  
+  .links {
+    padding: 0;
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-evenly;
+    position: relative;
+    z-index: 10;
+  }
+  
+  a {
+    color: #ececec;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    color: #d60730;
+  }

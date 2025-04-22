@@ -1,5 +1,4 @@
 .projetos {
-  background-color: #131313;
   position: relative;
   z-index: 5;
   height: 180px;
@@ -8,9 +7,8 @@
 }
 
 .grid-container {
-  display: grid;
-  grid-auto-flow: column;
-  grid-auto-columns: max-content;
+  display: flex;
+  flex-wrap: wrap;
   gap: 20px;
   align-items: center;
 }
@@ -23,17 +21,14 @@
 
 .project img {
   height: 250px;
-  width: 350px;
+  width: 300px;
   border-radius: 10px 10px 0 0;
 }
 
 .card {
-  border: 2px solid #1e377f;
   background-color: #0f1c41;
   border-radius: 10px;
   height: auto;
-  width: 350px;
-  margin: 10px;
   box-shadow: 5px 5px 5px #040814;
 }
 
@@ -51,12 +46,6 @@
 }
 
 @media (max-width: 768px) {
-  .grid-container {
-    grid-auto-flow: row;
-    grid-template-columns: 1fr 2fr;
-    justify-items: center;
-  }
-
   .project {
     width: 280px;
     height: 380px;
@@ -79,26 +68,18 @@
 }
 
 @media (max-width: 480px) {
-  .grid-container {
-    grid-auto-flow: row;
-    grid-template-columns: 1fr;
-    gap: 15px;
-    justify-items: center;
-  }
-
   .project {
     width: 250px;
     height: 160px;
   }
 
   .project img {
-    width: 388px;
+    width: 250px;
     height: 190px;
   }
 
   .card {
-    width: 250px;
-    margin: 8px 0;
+    height: auto;
   }
 
   .describeProject, .formatParag {

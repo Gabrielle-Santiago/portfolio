@@ -7,6 +7,7 @@
     box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
     background-image: linear-gradient(144deg, #43c2e9, #103e83 50%, #071f55);
     margin-bottom: 10px;
+    height: auto;
 }
 
 .card-servico {
@@ -45,10 +46,6 @@ font-size: 14px;
 }
 
 @media (max-width: 480px) {
-    .card {
-        height: 65vh;
-        width: 70vh;
-    }
     .cardServ {
         width: 95%;
         padding: 8px;
