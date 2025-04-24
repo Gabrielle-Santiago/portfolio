@@ -39,34 +39,31 @@ strong {
     color: #1dbba7;
 }
 
-.links {
-    padding: 0;
-    margin-top: 20px;
+nav {
+    background-color: #090422;
+    font-size: 14px;
+    padding: 10px;
+  }
+  
+  nav ul {
+    list-style: none;
     display: flex;
     justify-content: space-evenly;
     position: relative;
-    z-index: 10;
-}
-
-.links li {
-    list-style: none;   
-}
-
-.links li a {
-    font-size: 14px;
+    gap: 20px;
+    padding: 0;
     text-transform: uppercase;
-    font-weight: 700;
-}
-
-a {
+  }
+  
+  nav ul li a {
     color: #cccaca;
     text-decoration: none;
-}
-
-a:hover {
+    font-weight: 700;
+  }
+  
+  nav ul li a:hover {
     color: #d60730;
-    text-decoration: none;
-}
+  }
 
 @media (max-width: 768px) {
     main {

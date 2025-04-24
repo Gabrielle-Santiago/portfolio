@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="./static/css/index/buttons.css">
     <link rel="stylesheet" href="./static/css/index/service.css">
     <link rel="stylesheet" href="./static/css/index/animation.css">
+    <link rel="stylesheet" href="./static/css/index/footer.css">
     <link rel="icon" type="image/png" sizes="32x32" href="./static/img/favicon/favicon-32x32.png">
   </head>
   <body>
@@ -17,9 +18,8 @@
       <nav>
         <ul class="links">
           <li><a href="about.html">Sobre Mim</a></li>
-          <li><a href="projects.html">Projetos</a></li>
           <li><a href="skills.html">Minhas Skills</a></li>
-          <li><a href="#">Contatos</a></li>
+          <li><a href="#contato">Contatos</a></li>
         </ul>
       </nav>
     <header class="animation-section">
@@ -62,82 +62,88 @@
           </div>
 
           <div class="img-container">
-            <img class="imgComputer" src="../static/img/menina-computador.jpg" alt="imagem moça computador">
+            <img class="imgComputer" src="./static/img/menina-computador.jpg" alt="imagem moça computador">
             <p class="formatParag">Imagem feita por: pikisuperstar na plataforma Freepik</p>
           </div>
         </div>
       </div>
 
-      <div class="projetos">
-        <h3>Projetos</h3>
-        <p>Abaixo você pode encontrar mais informações sobre os projetos que realizei, ao clicar no card verá um modal contendo mais informações.</p>
+        <div class="projetos">
+          <h3>Projetos</h3>
+          <p>Abaixo você pode encontrar mais informações sobre os projetos que realizei, ao clicar no card verá um modal contendo mais informações.</p>
 
-        <div class="grid-container">
-          <div class="project card">
-            <img src="../static/img/agenda-automatica/Agenda-Automatica.png" alt="image project">
-            <h4 class="projectTitles">Agenda Automática</h4>
-            <p class="describeProject">Criação de uma agenda para uma empresa real onde os clientes possam agendar um horário</p>
-            <button class="button" data-text="Awesome">
-              <span class="actual-text">&nbsp;Mais Info&nbsp;</span>
-              <span aria-hidden="true" class="hover-text">&nbsp;MaisInfo&nbsp;</span>
-            </button>
+          <div class="grid-container">
+            <div class="project card">
+              <img src="./static/img/agenda-automatica/Agenda-Automatica.png" alt="image project">
+              <h4 class="projectTitles">Agenda Automática</h4>
+              <p class="describeProject">Criação de uma agenda para uma empresa real onde os clientes possam agendar um horário</p>
+              <button class="button" data-text="Awesome">
+                <span class="actual-text">&nbsp;Mais Info&nbsp;</span>
+                <span aria-hidden="true" class="hover-text">&nbsp;MaisInfo&nbsp;</span>
+              </button>
+            </div>
+
+            <div class="project card">
+              <img src="./static/img/game-catalog/front-game-catalog.jpeg" alt="image project">
+              <h4 class="projectTitles">Game Catolog</h4>
+              <p class="describeProject">O intuito da aplicação é o consumo de uma api externa e mostrar avaliações dos jogos</p>
+              <button class="button" data-text="Awesome">
+                <span class="actual-text">&nbsp;Mais Info&nbsp;</span>
+                <span aria-hidden="true" class="hover-text">&nbsp;MaisInfo&nbsp;</span>
+              </button>
+            </div>
+
+            <div class="project card">
+              <img src="./static/img/system-delivery/index.png" alt="image project">
+              <h4 class="projectTitles">System Delivery</h4>
+              <p class="describeProject">Sistema de pedidos de alimento, onde o usuário pode escolher entre ser vendedor ou consumidor</p>
+              <button class="button" data-text="Awesome">
+                <span class="actual-text">&nbsp;Mais Info&nbsp;</span>
+                <span aria-hidden="true" class="hover-text">&nbsp;MaisInfo&nbsp;</span>
+              </button>
+            </div>
           </div>
 
-          <div class="project card">
-            <img src="./static/img/game-catalog/front-game-catalog.jpeg" alt="image project">
-            <h4 class="projectTitles">Game Catolog</h4>
-            <p class="describeProject">O intuito da aplicação é o consumo de uma api externa e mostrar avaliações dos jogos</p>
-            <button class="button" data-text="Awesome">
-              <span class="actual-text">&nbsp;Mais Info&nbsp;</span>
-              <span aria-hidden="true" class="hover-text">&nbsp;MaisInfo&nbsp;</span>
-            </button>
-          </div>
-
-          <div class="project card">
-            <img src="./static/img/menina-computador.jpg" alt="image project">
-            <h4 class="projectTitles">System Delivery</h4>
-            <p class="describeProject">Sistema de pedidos de alimento, onde o usuário pode escolher entre ser vendedor ou consumidor</p>
-            <button class="button" data-text="Awesome">
-              <span class="actual-text">&nbsp;Mais Info&nbsp;</span>
-              <span aria-hidden="true" class="hover-text">&nbsp;MaisInfo&nbsp;</span>
-            </button>
-          </div>
-        </div>
-
-        <div class="serv">
-          <h3>Meus Serviços</h3>
-          <div>
-            <div class="grid-filho2">
-              <div class="cardServ">
-                <div class="card-servico">
-                  <h4 class="title4">Construção de APIs</h4>
-                  <p class="desService">Desenvolvo APIs seguras, rápidas e organizadas para conectar aplicações e integrar sistemas de forma eficiente.</p>
+          <div class="serv">
+            <h3>Meus Serviços</h3>
+            <div>
+              <div class="grid-filho2">
+                <div class="cardServ">
+                  <div class="card-servico">
+                    <h4 class="title4">Construção de APIs</h4>
+                    <p class="desService">Desenvolvo APIs seguras, rápidas e organizadas para conectar aplicações e integrar sistemas de forma eficiente.</p>
+                  </div>
                 </div>
-              </div>
-              <div class="cardServ">
-                <div class="card-servico">
-                  <h4 class="title4">Conexão com Banco de Dados</h4>
-                  <p class="desService">Realizo a modelagem e integração de sistemas com bancos de dados, garantindo segurança e performance no armazenamento das informações.</p>
+                <div class="cardServ">
+                  <div class="card-servico">
+                    <h4 class="title4">Conexão com Banco de Dados</h4>
+                    <p class="desService">Realizo a modelagem e integração de sistemas com bancos de dados, garantindo segurança e performance no armazenamento das informações.</p>
+                  </div>
                 </div>
-              </div>
-              <div class="cardServ">
-                <div class="card-servico">
-                  <h4 class="title4">Automação de Processos</h4>
-                  <p class="desService">Crio soluções que automatizam tarefas repetitivas e otimizam fluxos de trabalho, poupando tempo e aumentando a produtividade.</p>
+                <div class="cardServ">
+                  <div class="card-servico">
+                    <h4 class="title4">Automação de Processos</h4>
+                    <p class="desService">Crio soluções que automatizam tarefas repetitivas e otimizam fluxos de trabalho, poupando tempo e aumentando a produtividade.</p>
+                  </div>
                 </div>
-              </div>
-              <div class="cardServ">
-                <div class="card-servico">
-                  <h4 class="title4">Documentação e Organização</h4>
-                  <p class="desService">Organizo e documento projetos de forma clara e acessível, facilitando o entendimento e manutenção de sistemas.</p>
+                <div class="cardServ">
+                  <div class="card-servico">
+                    <h4 class="title4">Documentação e Organização</h4>
+                    <p class="desService">Organizo e documento projetos de forma clara e acessível, facilitando o entendimento e manutenção de sistemas.</p>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-        
-      </div>
-
+          <footer id="contato">
+            <h3>Contatos</h3>
+            <ul>
+              <li>Linkedin: <a href="https://www.linkedin.com/in/gabrielle-santiago-silva/">li/gabrielle-santiago</a></li>
+              <li>GitHub: <a href="https://github.com/Gabrielle-Santiago">/github.com/Gabrielle-Santiago</a></li>
+              <li>WhatsApp: <a href="https://wa.me/557388157665">what/gabrielle</a></li>
+            </ul>
+          </footer>
+        </div>      
       </div> 
     </main>
 

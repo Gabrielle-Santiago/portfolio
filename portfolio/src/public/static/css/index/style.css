@@ -165,9 +165,8 @@ a:hover {
   }
 
   .links {
-    flex-direction: row;
+    flex-direction: column;
     gap: 20px;
-    align-items: center;
     margin-left: 30px;
     font-size: 13px;
   }
