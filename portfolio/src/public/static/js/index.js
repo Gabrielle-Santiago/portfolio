@@ -24,7 +24,10 @@ const imgGame = [
 const imgDelivery = [
     { src: './static/img/system-delivery/index.png', texto: 'Área inicial onde o usuário seleciona a opção de cadastro ou login.' },
     { src: './static/img/system-delivery/cadastrar-delivery.png', texto: 'Área de cadastro, onde o usuário escolhe se será vendedor(Admin) ou consumidor(User).' },
-    { src: './static/img/system-delivery/login-delivery.png', texto: 'Local onde o usário confirma a identidade para prosseguir para o sistema.' },
+    { src: './static/img/system-delivery/login-delivery.png', texto: 'Local onde o usário confirma a identidade para prosseguir para o sistema.' },  
+    { src: './static/img/system-delivery/cadastro-produto-delivery.png', texto: 'Registro do produto no sistema (Home do vendedor)' },
+    { src: './static/img/system-delivery/update-produto-delivery.png', texto: 'Atualizar informações ou deletar os produtos' },
+    { src: './static/img/system-delivery/home-produto.png', texto: 'Visualização dos produtos cadastrados (Home do usuário)' },
     { src: './static/img/favicon/github.png', texto: 'Caso queira saber mais sobre o projeto entre no GitHub do projeto: <a href="https://github.com/Gabrielle-Santiago/System-Delivery" target="_blank" style="color: #d50505">Click Aqui!!</a><br> Imagem criada por:Github ícones criados por Ruslan Babkin - Flaticon'}
 ]
 
