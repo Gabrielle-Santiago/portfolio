@@ -7,12 +7,12 @@ function curriculo() {
 }
 
 const imgAgenda = [
-  { src: './static/img/agenda-automatica/Agenda-Automatica.png', texto: 'Área de agendamento, focado no registro de uma data para realizar o procedimento escolhido.' },
-  { src: './static/img/agenda-automatica/pedidoPerfume-agenda.png', texto: 'Área para realização do pedido de um dos produtos oferecidos pela empresa.' },
-  { src: './static/img/agenda-automatica/login-agenda.png', texto: 'Local para o proprietário logar e entrar no sistema.' },
-  { src: './static/img/agenda-automatica/lista-agenda.png', texto: 'Lista contendo as informações dos clientes, como horário e procedimento estético que será realizado, organizado a partir da data mais próxima até a mais distante.' },
-  { src: './static/img/agenda-automatica/saibaMais-agenda.png', texto: 'Aba que contém as principais informações e dúvidas referente aos serviços prestados, tais como valores, parcelamentos e meios de contatos.' },
-  { src: './static/img/favicon/github.png', texto: 'Caso queira saber mais sobre o projeto entre no GitHub do projeto: <a href="https://github.com/Gabrielle-Santiago/Agenda-Automatica" target="_blank" style="color: #d50505">Click Aqui!!</a><br> Imagem criada por:Github ícones criados por Ruslan Babkin - Flaticon'}
+  { src: './static/img/agenda-pro/inicio.png', texto: 'Tela de inicio, contendo as informações mais relevantes.' },
+  { src: './static/img/agenda-pro/cadastro.png', texto: 'Área de cadastro.' },
+  { src: './static/img/agenda-pro/login.png', texto: 'Local para o usuário logar e entrar no sistema.' },
+  { src: './static/img/agenda-pro/newConsultation.png', texto: 'Área para realizar o agendamento de um nova consulta.' },
+  { src: './static/img/agenda-pro/chat.png', texto: 'Aba que contém um chat em tempo real.' },
+  { src: './static/img/favicon/github.png', texto: 'Caso queira saber mais sobre o projeto entre no GitHub do projeto: <a href="https://github.com/Gabrielle-Santiago/agendapro" target="_blank" style="color: #d50505">Click Aqui!!</a><br> Imagem criada por:Github ícones criados por Ruslan Babkin - Flaticon'}
 ];
 
 const imgGame = [
