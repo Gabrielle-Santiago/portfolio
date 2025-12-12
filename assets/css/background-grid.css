@@ -1,0 +1,54 @@
+#grid-container {
+    position: fixed;
+    inset: 0;
+    z-index: -1;  
+    pointer-events: none; 
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 60px);
+    grid-auto-rows: 60px;
+}
+
+.tile {
+    position: relative;
+    background: transparent !important;
+    border-radius: 8px;
+    opacity: 1;
+    transition: opacity 0.3s ease;
+    mix-blend-mode: lighten;
+}
+
+.tile::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 6px;
+    width: 6px;
+    transform: translate(-50%, -50%);
+    background: #1061BE; 
+    border-radius: 50%;
+    opacity: -1;
+    transition: 150ms linear;
+    box-shadow:
+    0 0 0 10px #1061BE,
+    60px 0 0 -4px #0b3f7a,
+    -60px 0 0 -4px #062446,
+    0 60px 0 -4px #87b7ff,
+    0 -60px 0 -4px #87b7ff,
+    60px 60px 0 -10px #4e6a96,
+    60px -60px 0 -10px #1061BE,
+    -60px 60px 0 -10px #1d3a6e,
+    -60px -60px 0 -10px #131827;
+}
+
+.tile.active::before {
+    height: 30px;
+    width: 30px;
+    opacity: 0.8;
+}
+
+.content * {
+  position: relative;
+  z-index: 10;
+  mix-blend-mode: normal;
+}

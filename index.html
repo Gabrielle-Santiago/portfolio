@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfólio — Gabrielle S Silva</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <link rel="stylesheet" href="./assets/css/menu.css">
+  <link rel="stylesheet" href="./assets/css/background-grid.css">
+
+  <meta name="description" content="Portfólio de Gabrielle S Silva — Desenvolvimento backend, APIs, sistemas e projetos digitais sólidos.">
+  <meta name="author" content="Gabrielle S Silva">
+</head>
+
+<body class="bg-[#0c131d] text-white min-h-screen overflow-x-hidden relative">
+
+  <div id="grid-container" aria-hidden="true"></div>
+
+  <header class="fixed top-6 right-6 z-50">
+    <nav class="relative select-none">
+      <button id="menuBtn" class="menu" aria-label="Abrir menu">
+          <div class="menu-line line1"></div>
+          <div class="menu-line line2"></div>
+          <div class="menu-line line3"></div>
+      </button>
+
+      <ul class="menu-dropdown text-lg">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#sobre">Sobre mim</a></li>
+          <li><a href="#projetos">Projetos</a></li>
+          <li><a href="#contato">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="home" class="min-h-screen flex flex-col lg:flex-row items-center justify-center gap-20 px-8">
+
+    <section class="flex flex-col gap-6 mt-10 content">
+      <h1 class="text-4xl lg:text-5xl font-bold">
+        Gabrielle S Silva
+      </h1>
+
+      <p class="text-xl leading-relaxed max-w-xl">
+        Apaixonada por transformar ideias em estruturas sólidas
+        e experiências digitais que realmente funcionam.
+      </p>
+
+      <div class="flex gap-4 mt-4">
+        <a href="https://wa.me/557388157665" target="_blank" aria-label="WhatsApp"
+          class="w-10 h-10 flex items-center justify-center bg-green-500 text-black rounded-full font-bold"> <img src="assets/img/whatsapp.png" alt="WhatsApp"> </a>
+
+        <a href="https://www.linkedin.com/in/gabrielle-santiago-silva/" target="_blank" aria-label="LinkedIn"
+          class="w-10 h-10 flex items-center justify-center bg-blue-600 text-white rounded-full font-bold"> <img src="assets/img/social.png" alt="Linkedin"> </a>
+
+        <a href="https://github.com/Gabrielle-Santiago" target="_blank" aria-label="GitHub"
+          class="w-10 h-10 flex items-center justify-center bg-white text-black rounded-full font-bold"> <img src="assets/img/github.png" alt="GitHub"> </a>
+      </div>
+    </section>
+
+    <section class="relative flex justify-center items-center mt-16 lg:mt-0">
+
+      <div class="w-[420px] h-[420px] bg-gradient-to-br from-blue-900 to-blue-600 rounded-full absolute"></div>
+
+      <img
+        src="#"
+        alt="Avatar Gabrielle"
+        class="relative w-[340px] lg:w-[380px] z-10 pointer-events-none"
+      />
+    </section>
+  </main>
+
+  <script src="./assets/js/menu.js" defer></script>
+  <script src="./assets/js/background-grid.js" defer></script>
+
+</body>
+</html>
