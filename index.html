@@ -3,12 +3,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Portfólio — Gabrielle S Silva</title>
+  <title>Portfólio Gabrielle S Silva</title>
 
   <script src="https://cdn.tailwindcss.com"></script>
 
   <link rel="stylesheet" href="./assets/css/menu.css">
   <link rel="stylesheet" href="./assets/css/background-grid.css">
+  <link rel="stylesheet" href="./assets/css/projects.css">
 
   <meta name="description" content="Portfólio de Gabrielle S Silva — Desenvolvimento backend, APIs, sistemas e projetos digitais sólidos.">
   <meta name="author" content="Gabrielle S Silva">
@@ -16,60 +17,126 @@
 
 <body class="bg-[#0c131d] text-white min-h-screen overflow-x-hidden relative">
 
-  <div id="grid-container" aria-hidden="true"></div>
+  <section id="hero" class="relative w-full min-h-screen overflow-hidden">
 
-  <header class="fixed top-6 right-6 z-50">
-    <nav class="relative select-none">
-      <button id="menuBtn" class="menu" aria-label="Abrir menu">
-          <div class="menu-line line1"></div>
-          <div class="menu-line line2"></div>
-          <div class="menu-line line3"></div>
-      </button>
+      <div id="grid-container" aria-hidden="true" class="absolute inset-0"></div>
 
-      <ul class="menu-dropdown text-lg">
-          <li><a href="#home">Home</a></li>
-          <li><a href="#sobre">Sobre mim</a></li>
-          <li><a href="#projetos">Projetos</a></li>
-          <li><a href="#contato">Contato</a></li>
-      </ul>
-    </nav>
-  </header>
+      <header class="fixed top-6 right-6 z-50">
+        <nav class="relative select-none">
+          <button id="menuBtn" class="menu" aria-label="Abrir menu">
+              <div class="menu-line line1"></div>
+              <div class="menu-line line2"></div>
+              <div class="menu-line line3"></div>
+          </button>
 
-  <main id="home" class="min-h-screen flex flex-col lg:flex-row items-center justify-center gap-20 px-8">
+          <ul class="menu-dropdown text-lg">
+              <li><a href="#home">Home</a></li>
+              <li><a href="#sobre">Sobre mim</a></li>
+              <li><a href="#projetos">Projetos</a></li>
+              <li><a href="#contato">Contato</a></li>
+          </ul>
+        </nav>
+      </header>
 
-    <section class="flex flex-col gap-6 mt-10 content">
-      <h1 class="text-4xl lg:text-5xl font-bold">
-        Gabrielle S Silva
-      </h1>
+      <main id="home" class="relative z-10 min-h-screen flex flex-col lg:flex-row items-center justify-center gap-20 px-8">
 
-      <p class="text-xl leading-relaxed max-w-xl">
-        Apaixonada por transformar ideias em estruturas sólidas
-        e experiências digitais que realmente funcionam.
-      </p>
+        <section class="flex flex-col gap-6 mt-10 content">
+          <h1 class="text-4xl lg:text-5xl font-bold"> Gabrielle S Silva </h1>
 
-      <div class="flex gap-4 mt-4">
-        <a href="https://wa.me/557388157665" target="_blank" aria-label="WhatsApp"
-          class="w-10 h-10 flex items-center justify-center bg-green-500 text-black rounded-full font-bold"> <img src="assets/img/whatsapp.png" alt="WhatsApp"> </a>
+          <p class="text-xl leading-relaxed max-w-xl">
+            Apaixonada por transformar ideias em estruturas sólidas
+            e experiências digitais que realmente funcionam.
+          </p>
 
-        <a href="https://www.linkedin.com/in/gabrielle-santiago-silva/" target="_blank" aria-label="LinkedIn"
-          class="w-10 h-10 flex items-center justify-center bg-blue-600 text-white rounded-full font-bold"> <img src="assets/img/social.png" alt="Linkedin"> </a>
+          <div class="flex gap-4 mt-4">
+            <a href="https://wa.me/557388157665" target="_blank" aria-label="WhatsApp"
+              class="w-10 h-10 flex items-center justify-center bg-green-500 text-black rounded-full font-bold">
+              <img src="assets/img/whatsapp.png" alt="WhatsApp">
+            </a>
 
-        <a href="https://github.com/Gabrielle-Santiago" target="_blank" aria-label="GitHub"
-          class="w-10 h-10 flex items-center justify-center bg-white text-black rounded-full font-bold"> <img src="assets/img/github.png" alt="GitHub"> </a>
-      </div>
-    </section>
+            <a href="https://www.linkedin.com/in/gabrielle-santiago-silva/" target="_blank" aria-label="LinkedIn"
+              class="w-10 h-10 flex items-center justify-center bg-blue-600 text-white rounded-full font-bold">
+              <img src="assets/img/social.png" alt="Linkedin">
+            </a>
 
-    <section class="relative flex justify-center items-center mt-16 lg:mt-0">
+            <a href="https://github.com/Gabrielle-Santiago" target="_blank" aria-label="GitHub"
+              class="w-10 h-10 flex items-center justify-center bg-white text-black rounded-full font-bold">
+              <img src="assets/img/github.png" alt="GitHub">
+            </a>
+          </div>
+        </section>
 
-      <div class="w-[420px] h-[420px] bg-gradient-to-br from-blue-900 to-blue-600 rounded-full absolute"></div>
+        <section class="relative flex justify-center items-center mt-16 lg:mt-0">
+          <div class="w-[420px] h-[420px] bg-gradient-to-br from-blue-900 to-blue-600 rounded-full absolute"></div>
 
-      <img
-        src="#"
-        alt="Avatar Gabrielle"
-        class="relative w-[340px] lg:w-[380px] z-10 pointer-events-none"
-      />
-    </section>
-  </main>
+          <img
+            src="#"
+            alt="Avatar Gabrielle"
+            class="relative w-[340px] lg:w-[380px] z-10 pointer-events-none"
+          />
+        </section>
+
+      </main>
+  </section>
+
+  <div class="w-full h-10 bg-gradient-to-b from-[#0c131d] to-[#12171e]"></div>
+
+  <section id="projetos" class="bg-[#242B32] min-h-screen w-full px-8 py-20 projects-section">
+    <h2 class="projects-title">Projetos</h2>
+
+    <div class="projects-grid thumb-wrap">
+        <article class="project-card">
+          <a class="project-thumb" href="https://github.com/Gabrielle-Santiago/clothing-ecommerce" target="_blank" aria-label="Projeto E-commerce de Roupas">
+              <img src="#" alt="E-commerce: Em desenvolvimento" class="bg-black">
+              <span class="placeholder">E-commerce de Roupas</span>
+          </a>
+
+          <h3 class="project-title">E-commerce de Roupas (Gestão de Venda e Compra)</h3>
+          <p class="project-desc">
+            Este projeto simula uma plataforma de comércio eletrônico completa, onde possui dois fluxos distintos e seguros para <strong>Vendedores</strong> e <strong>Clientes</strong>. 
+          </p>
+          <p>
+            O sistema gerencia o acesso e a segurança de dados (como métodos de pagamento) utilizando <strong>Tokens (Token e Refresh Token)</strong> e um sistema de <strong>Roles</strong> para garantir que apenas Vendedores autorizados possam gerenciar produtos (cadastrar, editar ou deletar). Atualmente está em <strong>desenvolvimento</strong>, o foco principal é na construção de uma arquitetura robusta para uma <strong>experiência de compra e venda confiável</strong>.
+          </p>
+      </article>
+
+        <article class="project-card">
+          <a class="project-thumb" href="https://github.com/Gabrielle-Santiago/System-Delivery" target="_blank" aria-label="Sistema de Pedidos de Delivery">
+              <img src="assets/img/projects/delivery.png" alt="Sistema de Pedidos de Delivery - Java Spring Boot">
+              <span class="placeholder">Delivery Backend</span>
+          </a>
+
+          <h3 class="project-title">Sistema de Pedidos de Delivery</h3>
+          <p class="project-desc">
+            Plataforma de delivery completa onde os clientes podem navegar, fazer pedidos e simular pagamentos. O sistema garante que o administrador da loja seja <strong>notificado por e-mail no mesmo instante</strong> em que um pedido é finalizado, permitindo uma resposta rápida e eficiente. O projeto foca em organizar o acesso e proteger os dados, criando uma experiência de compra e gestão de produtos <strong>fluida e confiável</strong>.
+          </p>
+      </article>
+
+      <article class="project-card">
+        <a class="project-thumb" href="https://github.com/Gabrielle-Santiago/GameCatalog" target="_blank" aria-label="Projeto GameCatalog">
+            <img src="assets/img/projects/gameCatalog.png" alt="GameCatalog Backend - API Externa">
+            <span class="placeholder">Catálogo de Jogos Backend</span>
+        </a>
+
+        <h3 class="project-title">GameCatalog: Catálogo de Jogos</h3>
+        <p class="project-desc">
+          Aplicação central para orquestrar e disponibilizar dados de jogos, notas e gêneros, consumindo e processando informações da API externa OpenCritic. O projeto é construído em uma <strong>arquitetura modular (DTO, Service, Controller e Client)</strong>, que facilita a manutenção e o desenvolvimento de novas funcionalidades. O foco é na <strong>integração eficiente</strong> e na <strong>organização limpa</strong> do código, garantindo que o usuário tenha acesso rápido e detalhado a informações específicas de jogos por meio de rotas bem definidas, incluindo busca personalizada.
+        </p>
+      </article>
+
+      <article class="project-card">
+        <a class="project-thumb" href="https://github.com/Gabrielle-Santiago/agendapro"  target="_blank" aria-label="Projeto Agenda Pro">
+            <img src="assets/img/projects/agendaPro.png" alt="Agenda Pro - Agendamento e WebSocket">
+            <span class="placeholder">Agendamento Automatizado</span>
+        </a>
+
+        <h3 class="project-title">Agenda Pro: Agendamento Automatizado e Chat em Tempo Real</h3>
+        <p class="project-desc">
+          Sistema focado em automatizar o agendamento de consultas médicas, respeitando regras complexas de horário e disponibilidade. O projeto possui diferenciais técnicos de alta complexidade, como a <strong>integração direta com o Google Calendar API</strong> para sincronização automática de compromissos e a implementação de <strong>Chat em Tempo Real</strong> entre usuários via <strong>WebSocket</strong>.
+        </p>
+    </article>
+    </div>
+  </section>
 
   <script src="./assets/js/menu.js" defer></script>
   <script src="./assets/js/background-grid.js" defer></script>
