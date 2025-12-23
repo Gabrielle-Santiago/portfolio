@@ -4,6 +4,12 @@
   transition: transform 0.3s ease;
 }
 
+@media (max-width: 640px) {
+  .menu {
+    width: 28px;
+  }
+}
+
 .menu-line {
   height: 3px;
   width: 100%;
@@ -11,6 +17,12 @@
   margin: 6px 0;
   border-radius: 2px;
   transition: 0.3s;
+}
+
+@media (max-width: 640px) {
+  .menu-line {
+    margin: 5px 0;
+  }
 }
 
 .menu.active .line1 {
@@ -38,6 +50,14 @@
   transform: translateY(-10px);
   pointer-events: none;
   transition: 0.35s ease;
+  z-index: 100;
+}
+
+@media (max-width: 640px) {
+  .menu-dropdown {
+    top: 52px;
+    min-width: 150px;
+  }
 }
 
 .menu-dropdown.open {
@@ -53,6 +73,13 @@
   white-space: nowrap;
   transition: 0.2s background;
   cursor: pointer;
+}
+
+@media (max-width: 640px) {
+  .menu-dropdown li {
+    padding: 10px 14px;
+    font-size: 14px;
+  }
 }
 
 .menu-dropdown li:hover {

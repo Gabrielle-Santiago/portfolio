@@ -8,15 +8,15 @@
 
     <meta name="description" content="Portfólio de Gabrielle S Silva — Desenvolvimento backend, APIs, sistemas e projetos digitais sólidos.">
     <meta name="author" content="Gabrielle S Silva">
-    <link rel="shortcut icon" href="assets/img/icon/icone.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="src/public/assets/img/icon/icone.ico" type="image/x-icon">
 
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="./assets/css/menu.css">
-    <link rel="stylesheet" href="./assets/css/background-grid.css">
-    <link rel="stylesheet" href="./assets/css/projects.css">
-    <link rel="stylesheet" href="./assets/css/about.css">
-    <link rel="stylesheet" href="./assets/css/avatar.css">
-     <link rel="stylesheet" href="./assets/css/contact.css">
+    <link rel="stylesheet" href="./src/public/assets/css/menu.css">
+    <link rel="stylesheet" href="./src/public/assets/css/background-grid.css">
+    <link rel="stylesheet" href="./src/public/assets/css/projects.css">
+    <link rel="stylesheet" href="./src/public/assets/css/about.css">
+    <link rel="stylesheet" href="./src/public/assets/css/avatar.css">
+    <link rel="stylesheet" href="./src/public/assets/css/contact.css">
 </head>
 
 <body class="bg-[#0c131d] text-white min-h-screen overflow-x-hidden relative">
@@ -51,55 +51,83 @@
                       <p class="text-gray-400 mb-6">Como você prefere se conectar?</p>
 
                       <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                          <a href="https://wa.me/557388157665" target="_blank" class="contact-card">
-                              <img src="assets/img/whatsapp.png" alt="whatsapp" class="w-8 h-8">
-                              <span>WhatsApp</span>
-                          </a>
-                          <a href="https://www.linkedin.com/in/gabrielle-santiago-silva/" target="_blank" class="contact-card">
-                              <img src="assets/img/social.png" alt="linkedin" class="w-8 h-8">
-                              <span>LinkedIn</span>
-                          </a>
-                          <a href="mailto:gabriellesantisilva@gmail.com" alt="email" class="contact-card">
-                              <span class="text-2xl">📧</span>
-                              <span>E-mail</span>
-                          </a>
-                          <a href="https://github.com/Gabrielle-Santiago" target="_blank" class="contact-card">
-                              <img src="assets/img/github.png" alt="github" class="w-8 h-8">
-                              <span>GitHub</span>
-                          </a>
-                      </div>
+                        <a href="https://wa.me/557388157665" target="_blank" class="contact-card flex items-center gap-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-green-500">
+                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                            </svg>
+                            <span>WhatsApp</span>
+                        </a>
+
+                        <a href="https://www.linkedin.com/in/gabrielle-santiago-silva/" target="_blank" class="contact-card flex items-center gap-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-blue-600">
+                                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                                <rect x="2" y="9" width="4" height="12"></rect>
+                                <circle cx="4" cy="4" r="2"></circle>
+                            </svg>
+                            <span>LinkedIn</span>
+                        </a>
+
+                        <a href="mailto:gabriellesantisilva@gmail.com" class="contact-card flex items-center gap-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-red-500">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                <polyline points="22,6 12,13 2,6"></polyline>
+                            </svg>
+                            <span>E-mail</span>
+                        </a>
+
+                        <a href="https://github.com/Gabrielle-Santiago" target="_blank" class="contact-card flex items-center gap-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                            </svg>
+                            <span>GitHub</span>
+                        </a>
+                    </div>
                   </div>
               </div>
             </nav>
         </header>
 
-        <main id="home" class="relative z-10 min-h-screen flex flex-col lg:flex-row items-center justify-center gap-20 px-8">
-            <section class="flex flex-col gap-6 mt-10 content">
+        <main id="home" class="relative z-10 min-h-screen flex flex-col lg:flex-row items-center justify-center gap-10 lg:gap-20 px-6 sm:px-8 text-center lg:text-left">
+
+            <section class="flex flex-col gap-6 mt-10 content items-center lg:items-start">
                 <h1 class="text-4xl lg:text-5xl font-bold">Gabrielle S Silva</h1>
                 <p class="text-xl leading-relaxed max-w-xl">
                     Apaixonada por transformar ideias em estruturas sólidas e experiências digitais que realmente funcionam.
                 </p>
 
                 <div class="flex gap-4 mt-4">
-                    <a href="https://wa.me/557388157665" target="_blank" aria-label="WhatsApp" class="w-10 h-10 flex items-center justify-center bg-green-500 text-black rounded-full font-bold transition-transform hover:scale-110">
-                        <img src="assets/img/whatsapp.png" alt="WhatsApp">
+                    <a href="https://wa.me/557388157665" target="_blank" aria-label="WhatsApp" 
+                    class="w-10 h-10 flex items-center justify-center bg-green-500 text-white rounded-full transition-transform hover:scale-110">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                        </svg>
                     </a>
-                    <a href="https://www.linkedin.com/in/gabrielle-santiago-silva/" target="_blank" aria-label="LinkedIn" class="w-10 h-10 flex items-center justify-center bg-blue-600 text-white rounded-full font-bold transition-transform hover:scale-110">
-                        <img src="assets/img/social.png" alt="Linkedin">
+
+                    <a href="https://www.linkedin.com/in/gabrielle-santiago-silva/" target="_blank" aria-label="LinkedIn" 
+                    class="w-10 h-10 flex items-center justify-center bg-blue-600 text-white rounded-full transition-transform hover:scale-110">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                            <rect x="2" y="9" width="4" height="12"></rect>
+                            <circle cx="4" cy="4" r="2"></circle>
+                        </svg>
                     </a>
-                    <a href="https://github.com/Gabrielle-Santiago" target="_blank" aria-label="GitHub" class="w-10 h-10 flex items-center justify-center bg-white text-black rounded-full font-bold transition-transform hover:scale-110">
-                        <img src="assets/img/github.png" alt="GitHub">
+
+                    <a href="https://github.com/Gabrielle-Santiago" target="_blank" aria-label="GitHub" 
+                    class="w-10 h-10 flex items-center justify-center bg-gray-800 text-white rounded-full transition-transform hover:scale-110">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                        </svg>
                     </a>
                 </div>
             </section>
 
-            <section class="relative flex justify-center items-center mt-16 lg:mt-0">
-                <div class="relative w-[400px] h-[400px] flex items-center justify-center">
+            <section class="relative hidden lg:flex justify-center items-center mt-16 lg:mt-0">
+                <div class="relative w-[240px] h-[240px] md:w-[300px] md:h-[300px] lg:w-[400px] lg:h-[400px] flex items-center justify-center">
                     <div class="absolute inset-0 rounded-full overflow-hidden" style="background: radial-gradient(circle at top, #3b8fff, #0c131d); opacity: 0.85;">
-                        <img src="assets/img/fundo-circulo.png" alt="" class="w-full h-full object-cover scale-250" />
+                        <img src="src/public/assets/img/fundo-circulo.png" alt="" class="w-full h-full object-cover scale-250" />
                     </div>
                     <div class="gb-avatar-wrapper">
-                        <img src="assets/img/GB.png" alt="Avatar GB" class="gb-avatar" />
+                        <img src="src/public/assets/img/GB.png" alt="Avatar GB" class="gb-avatar" />
                     </div>
                 </div>
             </section>
@@ -126,7 +154,7 @@
 
             <article class="project-card">
                 <a class="project-thumb" href="https://github.com/Gabrielle-Santiago/System-Delivery" target="_blank" rel="noopener noreferrer" aria-label="Sistema de Pedidos de Delivery">
-                    <img src="assets/img/projects/delivery.png" alt="Sistema de Pedidos de Delivery">
+                    <img src="src/public/assets/img/projects/delivery.png" alt="Sistema de Pedidos de Delivery">
                     <span class="placeholder">Delivery Backend</span>
                     <span class="project-overlay">
                         <span class="project-cta">Ver projeto no GitHub</span>
@@ -138,7 +166,7 @@
 
             <article class="project-card">
                 <a class="project-thumb" href="https://github.com/Gabrielle-Santiago/GameCatalog" target="_blank" rel="noopener noreferrer" aria-label="Projeto GameCatalog">
-                    <img src="assets/img/projects/gameCatalog.png" alt="GameCatalog Backend">
+                    <img src="src/public/assets/img/projects/gameCatalog.png" alt="GameCatalog Backend">
                     <span class="placeholder">Catálogo de Jogos</span>
                     <span class="project-overlay">
                         <span class="project-cta">Ver projeto no GitHub</span>
@@ -150,7 +178,7 @@
 
             <article class="project-card">
                 <a class="project-thumb" href="https://github.com/Gabrielle-Santiago/agendapro" target="_blank" rel="noopener noreferrer" aria-label="Projeto Agenda Pro">
-                    <img src="assets/img/projects/agendaPro.png" alt="Agenda Pro">
+                    <img src="src/public/assets/img/projects/agendaPro.png" alt="Agenda Pro">
                     <span class="placeholder">Agendamento Automatizado</span>
                     <span class="project-overlay">
                         <span class="project-cta">Ver projeto no GitHub</span>
@@ -173,9 +201,9 @@
                 </p>
             </div>
 
-            <div class="about-visual">
+            <div class="about-visual hidden lg:flex">
                 <div class="about-avatar">
-                    <img src="assets/img/fundo-segundo-circulo.png" alt="Elemento abstrato futurista" class="about-bg" />
+                    <img src="src/public/assets/img/fundo-segundo-circulo.png" alt="Elemento abstrato futurista" class="about-bg" />
                 </div>
             </div>
         </div>
@@ -245,8 +273,8 @@
         </div>
     </section>
 
-    <script src="./assets/js/menu.js" defer></script>
-    <script src="./assets/js/background-grid.js" defer></script>
-    <script src="./assets/js/contact.js" defer></script>
+    <script src="./src/public/assets/js/menu.js" defer></script>
+    <script src="./src/public/assets/js/background-grid.js" defer></script>
+    <script src="./src/public/assets/js/contact.js" defer></script>
 </body>
 </html>

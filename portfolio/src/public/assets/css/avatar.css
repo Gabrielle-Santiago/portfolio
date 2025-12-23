@@ -39,3 +39,41 @@ section:hover .gb-avatar {
     rotateX(0deg)
     rotateY(0deg);
 }
+
+@media (max-width: 1024px) {
+  .gb-avatar-wrapper {
+    width: 380px;
+    height: 360px;
+  }
+
+  .gb-avatar {
+    width: 330px;
+    transform:
+      translateY(-35px)
+      perspective(700px)
+      rotateX(2deg)
+      rotateY(-2deg);
+  }
+}
+
+@media (max-width: 768px) {
+  .gb-avatar-wrapper {
+    width: 300px;
+    height: 280px;
+  }
+
+  .gb-avatar {
+    width: 260px;
+    transform:
+      translateY(-30px)
+      perspective(600px)
+      rotateX(1.5deg)
+      rotateY(-1.5deg);
+  }
+}
+
+@media (max-width: 640px) {
+  .gb-avatar-wrapper {
+    display: none;
+  }
+}
