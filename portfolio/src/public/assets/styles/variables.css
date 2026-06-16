@@ -1,0 +1,23 @@
+:root {
+    --bg:#131313;
+    --surface:#1b1b1b;
+    --surface-low:#0e0e0e;
+    --surface-high:#2a2a2a;
+    --text:#e2e2e2;
+    --text-muted:#ac878f;
+    --cyan:#00f0ff;
+    --pink:#ff00ff;
+    --magenta:#ff4a8d;
+    --lime:#c3f400;
+
+    --font-title: "Anton", sans-serif;
+    --font-body: "Space Mono", monospace;
+    --font-ui: "Space Grotesk", sans-serif;
+
+    --container: 1280px;
+    --spacing: 4px;
+
+    --border: 2px solid var(--cyan);
+    --glow: 0 0 15px var(--cyan);
+    --glow-pink: 0 0 15px var(--pink);
+}

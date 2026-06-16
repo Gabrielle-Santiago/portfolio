@@ -1,292 +1,291 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Gabrielle | Backend Developer</title>
+        <meta name="description" content="Portfólio de desenvolvedora backend focado em arquitetura, APIs e sistemas escaláveis.">
 
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portfólio | Gabrielle S Silva</title>
+        <link rel="icon" href="./assets/images/icon/home.webp">
 
-    <meta name="description" content="Portfólio de Gabrielle S Silva — Desenvolvimento backend, APIs, sistemas e projetos digitais sólidos.">
-    <meta name="author" content="Gabrielle S Silva">
-    <link rel="shortcut icon" href="assets/img/icon/icone.ico" type="image/x-icon">
+        <link rel="stylesheet" href="./assets/styles/reset.css">
+        <link rel="stylesheet" href="./assets/styles/variables.css">
+        <link rel="stylesheet" href="./assets/styles/global.css">
+        <link rel="stylesheet" href="./assets/styles/header.css">
+        <link rel="stylesheet" href="./assets/styles/hero.css">
+        <link rel="stylesheet" href="./assets/styles/projects.css">
+        <link rel="stylesheet" href="./assets/styles/stack.css">
+        <link rel="stylesheet" href="./assets/styles/about.css">
+        <link rel="stylesheet" href="./assets/styles/footer.css">
+    </head>
 
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="./assets/css/menu.css">
-    <link rel="stylesheet" href="./assets/css/background-grid.css">
-    <link rel="stylesheet" href="./assets/css/projects.css">
-    <link rel="stylesheet" href="./assets/css/about.css">
-    <link rel="stylesheet" href="./assets/css/avatar.css">
-    <link rel="stylesheet" href="./assets/css/contact.css">
-</head>
+    <body>
+        <header class="header">
+            <div class="logo">
+                <span></span>
+                BACKEND_DEV
+            </div>
 
-<body class="bg-[#0c131d] text-white min-h-screen overflow-x-hidden relative">
-
-    <section id="hero" class="relative w-full min-h-screen overflow-hidden">
-        <div id="grid-container" aria-hidden="true" class="absolute inset-0"></div>
-
-        <header class="fixed top-6 right-6 z-50">
-            <nav class="relative select-none">
-                <button id="menuBtn" class="menu" aria-label="Abrir menu">
-                    <div class="menu-line line1"></div>
-                    <div class="menu-line line2"></div>
-                    <div class="menu-line line3"></div>
-                </button>
-
-                <ul class="menu-dropdown text-lg">
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#sobre">Sobre mim</a></li>
-                    <li><a href="#projetos">Projetos</a></li>
-                    <li><a href="#contatos" id="openContact">Contato</a></li>
-                </ul>
-
-                <div id="contactModal" class="contact-modal-container">
-                  <div id="modalOverlay" class="modal-overlay"></div>
-                  
-                  <div class="modal-content">
-                      <button id="closeContact" class="close-modal-btn" aria-label="Fechar modal">
-                          &times;
-                      </button>
-
-                      <h2 class="text-2xl font-bold text-[#3b8fff] mb-2">Contato</h2>
-                      <p class="text-gray-400 mb-6">Como você prefere se conectar?</p>
-
-                      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                        <a href="https://wa.me/557388157665" target="_blank" class="contact-card flex items-center gap-2">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-green-500">
-                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
-                            </svg>
-                            <span>WhatsApp</span>
-                        </a>
-
-                        <a href="https://www.linkedin.com/in/gabrielle-santiago-silva/" target="_blank" class="contact-card flex items-center gap-2">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-blue-600">
-                                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
-                                <rect x="2" y="9" width="4" height="12"></rect>
-                                <circle cx="4" cy="4" r="2"></circle>
-                            </svg>
-                            <span>LinkedIn</span>
-                        </a>
-
-                        <a href="mailto:gabriellesantisilva@gmail.com" class="contact-card flex items-center gap-2">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-red-500">
-                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
-                                <polyline points="22,6 12,13 2,6"></polyline>
-                            </svg>
-                            <span>E-mail</span>
-                        </a>
-
-                        <a href="https://github.com/Gabrielle-Santiago" target="_blank" class="contact-card flex items-center gap-2">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
-                            </svg>
-                            <span>GitHub</span>
-                        </a>
-                    </div>
-                  </div>
-              </div>
+            <nav class="navigation">
+                <a class="active" href="#home">Home</a>
+                <a href="./assets/pages/ecommerce.html">Projetos</a>
+                <a href="./assets/pages/education.html">Educação</a>
+                <a href="#contact">@</a>
             </nav>
+
+            <a class="btn-neon" href="#contact">Contatos</a>
         </header>
 
-        <main id="home" class="relative z-10 min-h-screen flex flex-col lg:flex-row items-center justify-center gap-10 lg:gap-20 px-6 sm:px-8 text-center lg:text-left">
+        <main>
+            <section id="home" class="hero">
+                <div class="hero-content">
+                    <h1>
+                        CÓDIGO 
+                        <span>RESILIENTE</span>
+                        <br>EM AMBIENTES<br>
+                        <strong>CAÓTICOS</strong>
+                    </h1>
 
-            <section class="flex flex-col gap-6 mt-10 content items-center lg:items-start">
-                <h1 class="text-4xl lg:text-5xl font-bold">Gabrielle S Silva</h1>
-                <p class="text-xl leading-relaxed max-w-xl">
-                    Apaixonada por transformar ideias em estruturas sólidas e experiências digitais que realmente funcionam.
-                </p>
+                    <p>
+                        Desenvolvo sistemas backend organizados,
+                        seguros e sustentáveis.
+                        Transformo regras de negócio em APIs
+                        estruturadas e soluções escaláveis.
+                    </p>
 
-                <div class="flex gap-4 mt-4">
-                    <a href="https://wa.me/557388157665" target="_blank" aria-label="WhatsApp" 
-                    class="w-10 h-10 flex items-center justify-center bg-green-500 text-white rounded-full transition-transform hover:scale-110">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
-                        </svg>
-                    </a>
+                    <div class="hero-actions">
+                        <a href="#projects">Projetos</a>
+                        <a href="#contact">Contato</a>
+                    </div>
+                </div>
 
-                    <a href="https://www.linkedin.com/in/gabrielle-santiago-silva/" target="_blank" aria-label="LinkedIn" 
-                    class="w-10 h-10 flex items-center justify-center bg-blue-600 text-white rounded-full transition-transform hover:scale-110">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
-                            <rect x="2" y="9" width="4" height="12"></rect>
-                            <circle cx="4" cy="4" r="2"></circle>
-                        </svg>
-                    </a>
+                <div class="core-card">
+                    <p>0101010101010101</p>
+                    <br>
+                    <span>SYSTEM_STATUS: STABLE</span>
 
-                    <a href="https://github.com/Gabrielle-Santiago" target="_blank" aria-label="GitHub" 
-                    class="w-10 h-10 flex items-center justify-center bg-gray-800 text-white rounded-full transition-transform hover:scale-110">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
-                        </svg>
-                    </a>
+                    <h2>
+                    BACKEND
+
+                    <strong>CORE</strong>
+                    </h2>
+
+                    <br>
+                    <p>0101010101010101</p>
                 </div>
             </section>
 
-            <section class="relative hidden lg:flex justify-center items-center mt-16 lg:mt-0">
-                <div class="relative w-[240px] h-[240px] md:w-[300px] md:h-[300px] lg:w-[400px] lg:h-[400px] flex items-center justify-center">
-                    <div class="absolute inset-0 rounded-full overflow-hidden" style="background: radial-gradient(circle at top, #3b8fff, #0c131d); opacity: 0.85;">
-                        <img src="assets/img/fundo-circulo.png" alt="" class="w-full h-full object-cover scale-250" />
+            <section id="projects" class="projects">
+
+                <header class="section-title">
+                    <h2>PROJETOS</h2>
+                    <span>/ WORK_LOG.exe</span>
+                </header>
+
+                <div class="project-grid">
+                    <a href="./assets/pages/ecommerce.html" class="project-card project-pink">
+                        <img src="./assets/images/projects/ecommerce.webp" alt="Projeto ecommerce">
+
+                        <div class="project-content">
+                            <h3>INFRA_REBUILD_API</h3>
+
+                            <p>Sistema ecommerce com autenticação e regras de negócio.</p>
+                            <span>OPEN_PROJECT → </span>
+                        </div>
+                    </a>
+
+                    <a href="./assets/pages/delivery.html" class="project-card project-blue">
+                        <img src="./assets/images/projects/system-delivery.webp" alt="Projeto delivery">
+
+                        <h3>CORE_DATA_GATEWAY</h3>
+
+                        <p>API backend com gerenciamento de pedidos.</p>
+                        <span>OPEN_PROJECT → </span>
+                    </a>
+
+                    <a href="./assets/pages/gamecatalog.html" class="project-card project-pink">
+                        <img src="./assets/images/projects/gamecatalog.webp" alt="Game catalog">
+
+                        <h3>AUTH_PROTOCOL_SYSTEM</h3>
+
+                        <p>API modular com integração externa.</p>
+                        <span>OPEN_PROJECT → </span>
+                    </a>
+
+                    <a href="./assets/pages/pdf-analyzer.html" class="project-card project-blue">
+
+                        <img src="./assets/images/projects/sql.webp" alt="PDF Analyzer">
+               
+                        <h3>DATA_EXTRACTION_ENGINE </h3>
+
+                        <p>
+                            Aplicação Java para análise de documentos,
+                            extração de dados e armazenamento estruturado.
+                        </p>
+                        <span>OPEN_PROJECT →</span>
+                    </a>
+
+                </div>
+            </section>
+
+            <section id="stack" class="stack">
+                <header class="section-title">
+                    <h2>TECNOLOGIAS</h2>
+                    <span>SYSTEM_STACK.v2.0</span>
+                </header>
+
+                <div class="stack-container">
+                    <div class="primary-stack">
+                        <h3>PRIMARY_STACK</h3>
+
+                        <p>
+                            Java,
+                            Spring Boot,
+                            REST API,
+                            PostgreSQL,
+                            Docker
+                        </p>
                     </div>
-                    <div class="gb-avatar-wrapper">
-                        <img src="assets/img/GB.png" alt="Avatar GB" class="gb-avatar" />
+
+                    <div>
+                        <h3>BACKEND & CORE</h3>
+
+                        <ul>
+                            <li>Spring Security</li>
+                            <li>JWT</li>
+                            <li>JPA / Hibernate</li>
+                            <li>SOLID</li>
+                            <li>Clean Code</li>
+                            <li>Arquitetura</li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h3>DATABASE_LAYER</h3>
+
+                        <ul>
+                            <li>SQL</li>
+                            <li>H2</li>
+                            <li>MySQL</li>
+                            <li>Modelagem Relacional</li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h3>INTEGRATIONS</h3>
+
+                        <ul>
+                            <li>APIs Externas</li>
+                            <li>Google Calendar</li>
+                            <li>SMTP</li>
+                            <li>WebSocket</li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h3>DEV_TOOLS</h3>
+
+                        <ul>
+                            <li>Git</li>
+                            <li>GitHub</li>
+                            <li>Swagger</li>
+                            <li>Insomnia</li>
+                            <li>Postman</li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h3>FRONTEND & CONSUMO</h3>
+
+                        <ul>
+                            <li>HTML</li>
+                            <li>CSS</li>
+                            <li>JavaScript</li>
+                            <li>Angular</li>
+                            <li>TypeScript</li>
+                        </ul>
+
+                    </div>
+                </div>
+            </section>
+
+            <section id="about" class="about">
+
+                <div class="about-card">
+                    <div class="about-content">
+                        <header class="section-title">
+
+                            <h2>SOBRE</h2>
+                            <span>IDENTITY_MODULE</span>
+
+                        </header>
+
+                        <p>
+                            Desenvolvedora backend focada em arquitetura,
+                            segurança e boas práticas de engenharia.
+
+                            Meu objetivo é criar sistemas organizados,
+                            fáceis de manter e preparados para evoluir.               
+                        </p>
+
+                        <p>              
+                            Onde o processo de desenvolvimento começa pela compreensão do problema e das regras de negócio, seguindo com definição da arquitetura, implementação, integração e testes.
+
+                            Garantindo uma qualidade e segurança completa durante todo o processo de construção de uma aplicação.
+                        </p>
+                    </div>
+
+                    <div class="about-info">
+                        <div class="metrics">
+                            <div>
+
+                                <strong>02+</strong>
+                                <span>ANOS_EXP</span>
+                            </div>
+
+                            <div>
+                                <strong>10+</strong>
+                                <span>REPOS</span>
+                            </div>
+                        </div>
+
+                        <div class="about-stack-mini">
+
+                            <h3>CORE_STACK</h3>
+
+                            <ul>
+                                <li>Java / Spring Boot</li>
+                                <li>PostgreSQL</li>
+                                <li>Docker / Docker Compose</li>
+                                <li>APIs REST</li>
+                            </ul>
+                        </div>
+
+                        <a class="btn-neon" href="./assets/documents/curriculo-gabrielle.pdf" download>DOWNLOAD_MANIFESTO_CV</a>
+
                     </div>
                 </div>
             </section>
         </main>
-    </section>
+        
 
-    <div class="w-full h-10 bg-gradient-to-b from-[#0c131d] to-[#12171e]"></div>
-
-    <section id="projetos" class="bg-[#242B32] min-h-screen w-full px-8 py-20 projects-section">
-        <h2 class="projects-title">Projetos</h2>
-
-        <div class="projects-grid thumb-wrap">
-            <article class="project-card">
-                <a class="project-thumb" href="https://github.com/Gabrielle-Santiago/clothing-ecommerce" target="_blank" rel="noopener noreferrer" aria-label="Projeto E-commerce de Roupas">
-                    <img src="assets/img/projects/ecommerce.png" alt="E-commerce: Em desenvolvimento">
-                    <span class="placeholder">E-commerce de Roupas</span>
-                    <span class="project-overlay">
-                        <span class="project-cta">Ver projeto no GitHub</span>
-                    </span>
-                </a>
-                <h3 class="project-title">E-commerce de Roupas</h3>
-                <p class="project-desc">Plataforma de vendas com autenticação segura, controle de acesso e gestão de produtos.</p>
-            </article>
-
-            <article class="project-card">
-                <a class="project-thumb" href="https://github.com/Gabrielle-Santiago/System-Delivery" target="_blank" rel="noopener noreferrer" aria-label="Sistema de Pedidos de Delivery">
-                    <img src="assets/img/projects/delivery.png" alt="Sistema de Pedidos de Delivery">
-                    <span class="placeholder">Delivery Backend</span>
-                    <span class="project-overlay">
-                        <span class="project-cta">Ver projeto no GitHub</span>
-                    </span>
-                </a>
-                <h3 class="project-title">Sistema de Delivery</h3>
-                <p class="project-desc">Sistema de pedidos com notificações em tempo real e fluxo completo de compra.</p>
-            </article>
-
-            <article class="project-card">
-                <a class="project-thumb" href="https://github.com/Gabrielle-Santiago/GameCatalog" target="_blank" rel="noopener noreferrer" aria-label="Projeto GameCatalog">
-                    <img src="assets/img/projects/gameCatalog.png" alt="GameCatalog Backend">
-                    <span class="placeholder">Catálogo de Jogos</span>
-                    <span class="project-overlay">
-                        <span class="project-cta">Ver projeto no GitHub</span>
-                    </span>
-                </a>
-                <h3 class="project-title">GameCatalog</h3>
-                <p class="project-desc">API para catálogo de jogos com dados externos, buscas personalizadas e organização modular.</p>
-            </article>
-
-            <article class="project-card">
-                <a class="project-thumb" href="https://github.com/Gabrielle-Santiago/project-ia" target="_blank" rel="noopener noreferrer" aria-label="Agente I.A">
-                    <img src="assets/img/projects/ia.png" alt="Agente de I.A">
-                    <span class="placeholder">Agente de I.A</span>
-                    <span class="project-overlay">
-                        <span class="project-cta">Ver projeto no GitHub</span>
-                    </span>
-                </a>
-                <h3 class="project-title">Agente de I.A</h3>
-                <p class="project-desc">Simulação de um sistema corporativo de validação de compras onde a decisão é tomada por um modelo de linguagem que respeita regras determinísticas e retorna uma resposta estruturada.</p>
-            </article>
-
-            <article class="project-card">
-                <a class="project-thumb" href="https://github.com/Gabrielle-Santiago/agendapro" target="_blank" rel="noopener noreferrer" aria-label="Projeto Agenda Pro">
-                    <img src="assets/img/projects/agendaPro.png" alt="Agenda Pro">
-                    <span class="placeholder">Agendamento Automatizado</span>
-                    <span class="project-overlay">
-                        <span class="project-cta">Ver projeto no GitHub</span>
-                    </span>
-                </a>
-                <h3 class="project-title">Agenda Pro</h3>
-                <p class="project-desc">Sistema de agendamento inteligente com integração externa e comunicação em tempo real.</p>
-            </article>
-        </div>
-    </section>
-
-    <section id="sobre" class="about-section">
-        <h2 class="about-title">Sobre mim</h2>
-
-        <div class="about-main">
-            <div class="about-text">
-                <h3 class="about-headline">Desenvolvedora backend focada em arquitetura, segurança e integrações</h3>
-                <p class="about-description">
-                    Atuo principalmente no desenvolvimento backend, criando APIs bem estruturadas, seguras e fáceis de evoluir. Tenho forte atenção à organização do código, separação de responsabilidades e integração com serviços externos, sempre pensando em manutenção e escalabilidade.
-                </p>
+        <footer id="contact" class="footer">
+            <div>
+                <h2>NEON_PROTOCOL</h2>
+                <p>BACKEND_DEV</p>
             </div>
 
-            <div class="about-visual hidden lg:flex">
-                <div class="about-avatar">
-                    <img src="assets/img/fundo-segundo-circulo.png" alt="Elemento abstrato futurista" class="about-bg" />
-                </div>
-            </div>
-        </div>
+            <nav>
+                <a href="https://wa.me/557388157665" target="_blank">WhatsApp</a>
+                <a href="https://github.com/Gabrielle-Santiago" target="_blank">GitHub</a>
+                <a href="https://www.linkedin.com/in/gabrielle-santiago-silva/" target="_blank">LinkedIn</a>
+                <a href="mailto:gabriellesantisilva@gmail.com" target="_blank">Email</a>   
+            </nav>
 
-        <div class="about-principles">
-            <div class="principle-card">🧠 Arquitetura antes de código</div>
-            <div class="principle-card">🔐 Segurança não é opcional</div>
-            <div class="principle-card">⚙️ APIs bem definidas</div>
-            <div class="principle-card">📦 Código legível e escalável</div>
-        </div>
+            <button>REPORT_SYS_ERROR</button>
 
-        <div class="about-stack">
-            <div class="stack-group">
-                <h4>Backend</h4>
-                <ul>
-                    <li>Java (Spring Boot)</li>
-                    <li>Arquitetura Hexagonal & MVC</li>
-                    <li>APIs REST</li>
-                    <li>JWT (autenticação e autorização)</li>
-                </ul>
-            </div>
+        </footer>
 
-            <div class="stack-group">
-                <h4>Banco de Dados</h4>
-                <ul>
-                    <li>PostgreSQL</li>
-                    <li>MySQL</li>
-                    <li>SQL (modelagem e consultas)</li>
-                </ul>
-            </div>
-
-            <div class="stack-group">
-                <h4>Infra & Ferramentas</h4>
-                <ul>
-                    <li>Docker</li>
-                    <li>Git & GitHub</li>
-                    <li>Postman / Insomnia</li>
-                </ul>
-            </div>
-
-            <div class="stack-group">
-                <h4>Qualidade & Padrões</h4>
-                <ul>
-                    <li>Clean Code & Boas Práticas</li>
-                    <li>Padrões GoF</li>
-                    <li>Organização em camadas (DTO, Service, Controller)</li>
-                </ul>
-            </div>
-
-            <div class="stack-group">
-                <h4>Frontend (base)</h4>
-                <ul>
-                    <li>JavaScript & TypeScript</li>
-                    <li>HTML & CSS</li>
-                    <li>Vue.js</li>
-                    <li>Thymeleaf</li>
-                </ul>
-            </div>
-
-            <div class="stack-group">
-                <h4>Outros</h4>
-                <ul>
-                    <li>WebSockets</li>
-                    <li>APIs externas</li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
-    <script src="./assets/js/menu.js" defer></script>
-    <script src="./assets/js/background-grid.js" defer></script>
-    <script src="./assets/js/contact.js" defer></script>
-</body>
+        <script src="./assets/js/main.js"></script>
+    </body>
 </html>
