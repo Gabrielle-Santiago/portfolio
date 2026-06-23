@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>ECOMMERCE_CORE</title>
+
+        <link rel="icon" href="../../assets/images/icon/project.webp">
+
+        <link rel="stylesheet" href="../../assets/styles/header.css">
+        <link rel="stylesheet" href="../../assets/styles/reset.css">
+        <link rel="stylesheet" href="../../assets/styles/variables.css">
+        <link rel="stylesheet" href="../../assets/styles/global.css">
+        <link rel="stylesheet" href="../../assets/styles/project-page.css">
+        <link rel="stylesheet" href="../../assets/styles/footer.css">
+    </head>
+
+    <body>
+        <header class="project-header">
+            <a href="../../index.html">← BACK</a>
+            <span>PROJECT_ECOMMERCE.exe</span>
+
+            <nav class="navigation">
+                <a class="active" href="../../index.html">Home</a>
+                <a href="../../assets/pages/education.html">Educação</a>
+            </nav>
+        </header>
+
+        <main class="project-page">
+
+            <section class="project-hero">
+
+                <div class="project-image">
+                    <img src="../images/projects/ecommerce/banner-ecommerce.webp" alt="E-commerce">
+                </div>
+
+                <div class="project-intro">
+
+                    <span>SYSTEM_MODULE</span>
+
+                    <h1>ECOMMERCE <strong>CORE</strong></h1><br>
+
+                    <p>
+                        Uma plataforma de e-commerce de alta performance projetada para simular os desafios reais
+                        do grande comércio digital. Indo muito além de um carrinho de compras comum, construído com
+                        Spring Boot e Angular, o projeto adota a Arquitetura Hexagonal para garantir um sistema
+                        escalável, de código limpo e totalmente independente de tecnologias externas.
+                    </p>
+                    <br>
+
+                    <p>
+                        Uma solução robusta que equilibra uma interface rápida e responsiva com um ecossistema backend
+                        focado em segurança rígida e alta estabilidade.
+                    </p>
+                </div>
+            </section>
+
+            <section class="project-content">
+                <div class="project-description">
+
+                    <h2>ABOUT_PROJECT</h2>
+
+                    <p>
+                        A plataforma gerencia com precisão todo o ciclo de vida de uma venda: desde o controle
+                        de estoque em tempo real até o rastreamento do pedido. Pensando na segurança do negócio,
+                        o sistema possui permissões dinâmicas que separam perfeitamente o painel do lojista (Seller) da
+                        área do consumidor (Client).
+                    </p>
+                    <br>
+
+                    <p>
+                        O grande diferencial comercial está na automação financeira:
+                        através de uma integração inteligente com o Mercado Pago, a plataforma recebe confirmações de
+                        pagamento em segundo plano (via Webhooks). Isso elimina falhas humanas e garante que o status da
+                        compra mude instantaneamente assim que o banco aprova o pagamento.
+                    </p>
+                    <br>
+
+                    <p>
+                        É a tecnologia trabalhando para criar uma experiência de compra sem atritos, segura e blindada
+                        contra falhas.
+                    </p>
+                </div>
+
+                <div class="project-info">
+                    <div class="info-card">
+
+                        <h3>TECH_STACK</h3>
+
+                        <ul>
+                            <li>Java 21</li>
+                            <li>Spring Boot</li>
+                            <li>Spring Security + JWT</li>
+                            <li>PostgreSQL</li>
+                            <li>JPA / Hibernate</li>
+                            <li>MapStruct</li>
+                            <li>Swagger/OpenAPI</li>
+                        </ul>
+                    </div>
+
+                    <div class="info-card">
+
+                        <h3>ARCHITECTURE</h3>
+
+                        <ul>
+                            <li>Clean Architecture</li>
+                            <li>Arquitetura Hexagonal</li>
+                            <li>Domain Driven Design (conceitos)</li>
+                            <li>Ports and Adapters</li>
+                            <li>Separação de camadas</li>
+                            <li>Repository Pattern</li>
+                        </ul>
+
+                    </div>
+                </div>
+            </section>
+
+            <section class="project-content">
+                <div class="project-description">
+
+                    <h2>FEATURES</h2>
+
+                    <ul>
+                        <li>→ Autenticação e autorização com JWT</li><br>
+
+                        <li>→ Controle de acesso entre clientes e vendedores</li><br>
+
+                        <li>→ Gerenciamento de produtos</li><br>
+
+                        <li>→ Criação e acompanhamento de compras</li><br>
+
+                        <li>→ Fluxo de pagamento integrado ao Mercado Pago</li><br>
+
+                        <li>→ Atualização de status através de Webhooks</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="project-flow">
+                <div>
+                    <h2>DATA_FLOW</h2>
+
+                    <p>
+                        <ul>
+                            <li>
+                                1. Intenção de Compra (Client): O cliente finaliza o pedido na interface responsiva em
+                                Angular, disparando uma requisição para o servidor.
+                            </li><br>
+
+                            <li>2. Processamento (API): O backend intercepta os dados, valida as regras de negócio e
+                                registra o pedido com o status inicial de PENDING no banco de dados.
+                            </li><br>
+
+                            <li>
+                                3. Redirecionamento de Pagamento (Gateway): O sistema conecta-se à API do Mercado Pago,
+                                gerando o checkout criptografado para o usuário realizar o pagamento.
+                            </li><br>
+
+                            <li>
+                                4. Confirmação Automatizada (Webhook): Assim que a transação é concluída no banco, o
+                                Mercado Pago avisa a nossa aplicação de forma assíncrona, enviando uma notificação para
+                                um endpoint de Webhook protegido.
+                            </li><br>
+
+                            <li>
+                                5. Atualização do Ciclo de Vida (Status Update): O sistema processa a confirmação do
+                                pagamento, atualiza o estoque e altera o status do pedido para CONFIRMED, avançando o
+                                ciclo da venda sem necessidade de interferência humana.
+                            </li>
+                        </ul>
+                    </p>
+                </div>
+
+                <img src="../images/projects/ecommerce/login-ecommerce.webp" alt="Fluxo do projeto">
+            </section>
+
+            <section class="project-content frontend-section">
+                <div class="project-description">
+
+                    <h2>FRONTEND_MODULE</h2>
+
+                    <p>
+                        A arquitetura do projeto foi desenhada para que o site funcione de forma inteligente e
+                        fragmentada. Telas fundamentais para a jornada do cliente, como a página inicial e as áreas de
+                        cadastro e login, rodam através de componentes autônomos (Standalone Components), o que elimina
+                        códigos desnecessários e deixa o carregamento instantâneo.
+                    </p>
+                    <br>
+
+                    <p>
+                        O visual responsivo se molda perfeitamente tanto em celulares quanto em computadores, mantendo
+                        os padrões estéticos da indústria da moda. Essa fundação sólida funciona de maneira isolada,
+                        deixando o terreno 100% pronto para a integração com o servidor backend e ativação das funções
+                        de compra de forma simples e rápida.
+                    </p>
+
+                </div>
+
+                <div class="project-info">
+                    <div class="info-card">
+
+                        <h3>FRONTEND_STACK</h3>
+
+                        <ul>
+                            <li>Angular</li>
+                            <li>TypeScript</li>
+                            <li>SCSS</li>
+                            <li>HTML5</li>
+                            <li>Angular Router</li>
+                            <li>HttpClient</li>
+                            <li>Reactive Forms</li>
+
+                        </ul>
+                    </div>
+
+                    <div class="info-card">
+
+                        <h3>FRONTEND_ARCHITECTURE</h3>
+
+                        <ul>
+                            <li>Standalone Components</li>
+                            <li>Feature Based Structure</li>
+                            <li>Lazy Loading</li>
+                            <li>Componentização</li>
+                            <li>Design System próprio</li>
+                            <li>Separação de responsabilidades</li>
+                        </ul>
+
+                    </div>
+                </div>
+            </section>
+
+
+            <section class="project-content">
+                <div class="project-description">
+
+                    <h2>USER_FLOW</h2>
+
+                    <p>
+                        O fluxo de ponta a ponta foi projetado para que a experiência do usuário seja fluida, rápida e
+                        totalmente segura, operando da seguinte forma:
+                    </p>
+                    <br>
+
+                    <p>
+                        <ul>
+                            <li>
+                                1. Acesso e Clique: O usuário interage com uma interface modular que responde instantaneamente.
+                            </li><br>
+
+                            <li>
+                                2. Disparo de Dados: O frontend envia as ações do usuário direto para a API em Spring Boot.
+                            </li><br>
+
+                            <li>
+                                3. Validação e Resposta: O servidor processa a lógica de negócio e atualiza a tela sem precisar recarregar a página.
+                            </li><br>
+
+                            <li>
+                                4. Proteção Automática: O sistema valida a identidade do usuário em segundo plano, garantindo uma navegação restrita e segura.
+                            </li><br>
+                        </ul>
+                    </p>
+                </div>
+
+                <div class="project-description">
+
+                    <h2>FRONTEND_FEATURES</h2>
+
+                    <ul>
+                        <li>→ Componentes reutilizáveis para interface</li><br>
+                        <li>→ Layout responsivo para desktop, tablet e mobile</li><br>
+                        <li>→ Formulários com validação</li><br>
+                        <li>→ Integração com autenticação JWT</li><br>
+                        <li>→ Controle de rotas protegidas</li><br>
+                        <li>→ Consumo de API REST utilizando HttpClient</li><br>
+                        <li>→ Organização baseada em features</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="project-links">
+                <div class="link-card">
+
+                    <span>SOURCE_CODE</span>
+
+                    <h3>
+                        GitHub
+                    </h3>
+
+                    <p>
+                        Código fonte completo,
+                        estrutura e implementação
+                        do projeto.
+                    </p>
+
+                    <a href="https://github.com/Gabrielle-Santiago/clothing-ecommerce" target="_blank">ACCESS_REPOSITORY →</a>
+                </div>
+
+                <div class="link-card">
+
+                    <span>PROJECT_STORY</span>
+                    <h3>LinkedIn</h3>
+
+                    <p>
+                        Publicação explicando desenvolvimento, decisões e aprendizados.
+                    </p>
+
+                    <a href="https://l1nk.dev/sy23fr1" target="_blank">VIEW_POST →</a>
+                </div>
+            </section>
+
+            <div class="project-navigation">
+
+                <a href="../../assets/pages/delivery.html" class="next-project">NEXT_PROJECT →</a>
+
+            </div>
+        </main>
+
+        <footer id="contact" class="footer">
+            <div>
+                <h2>NEON_PROTOCOL</h2>
+                <p>BACKEND_DEV</p>
+            </div>
+
+            <nav>
+                <a href="https://wa.me/557388157665" target="_blank">WhatsApp</a>
+                <a href="https://github.com/Gabrielle-Santiago" target="_blank">GitHub</a>
+                <a href="https://www.linkedin.com/in/gabrielle-santiago-silva/" target="_blank">LinkedIn</a>
+                <a href="mailto:gabriellesantisilva@gmail.com" target="_blank">Email</a>
+            </nav>
+
+            <button>REPORT_SYS_ERROR</button>
+
+        </footer>
+    </body>
+</html>

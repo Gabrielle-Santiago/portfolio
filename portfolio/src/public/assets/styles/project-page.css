@@ -1,0 +1,406 @@
+.project-header {
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+
+    align-items: center;
+    border-bottom: 1px solid var(--cyan);
+
+    padding-inline: 40px;
+    font-family: var(--font-ui);
+}
+
+.project-header a {
+    color: var(--cyan);
+}
+
+.project-page {
+    width: min(100% - 80px,var(--container));
+    margin: auto;
+    padding: 80px 0;
+}
+
+.project-hero {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.project-image {
+    border: 2px solid var(--cyan);
+    padding: 15px;
+    box-shadow: var(--glow);
+}
+
+.project-image img {
+    width: 100%;
+}
+
+.project-intro span {
+    font-size: 12px;
+    color: var(--cyan);
+}
+
+.project-intro h1 {
+    font-size: 80px;
+    margin-top: 20px 0px;
+}
+
+.project-intro strong {
+    display: block;
+    color: var(--pink);
+}
+
+.project-content {
+    margin-top: 100px;
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+}
+
+.project-description, .info-card {
+    border: 1px solid var(--cyan);
+    padding: 35px;
+    background: rgba(255,255,255,.02);
+}
+
+.project-content h2 {
+    color: var(--pink);
+    margin-bottom: 20px;
+}
+
+.info-card h3 {
+    font-family: var(--font-ui);
+    color: var(--cyan);
+}
+
+.info-card li {
+    margin-top: 12px;
+    font-size: 14px;
+}
+
+.info-card li::before {
+    content: "■";
+    color: var(--pink);
+    margin-right: 10px;
+}
+
+.project-flow {
+    margin-top: 100px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    gap: 50px;
+    align-items:center;
+}
+
+.project-flow p {
+    white-space: pre-line;
+    color: var(--cyan);
+    font-size: 20px;
+}
+
+.project-flow img {
+    border: 2px solid var(--pink);
+}
+
+.project-navigation {
+        margin-top: 100px;
+        display: flex;
+        justify-content: flex-end;
+}
+
+.next-project {
+        border: 2px solid var(--cyan);
+        padding: 15px 35px;
+
+        color: var(--cyan);
+
+        font-family: var(--font-ui);
+        font-size: 13px;
+        transition: .2s;
+}
+
+.next-project:hover {
+    background: var(--cyan);
+    color: var(--bg);
+    box-shadow: var(--glow);
+}
+
+.project-links {
+    margin-top: 100px;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 30px;
+}
+
+.link-card {
+    border: 1px solid var(--pink);
+    padding: 35px;
+
+    background: rgba(255,255,255,.02);
+    position: relative;
+}
+
+.link-card::before {
+    content: "";
+    position: absolute;
+
+    width: 40px;
+    height: 3px;
+
+    background: var(--cyan);
+
+    top: 0;
+    left: 0;
+}
+
+.link-card span {
+    font-family: var(--font-ui);
+    font-size: 12px;
+    color: var(--cyan);
+}
+
+.link-card h3 {
+    font-size: 35px;
+    margin: 15px 0;
+}
+
+.link-card p {
+    color: var(--text-muted);
+    margin-bottom: 30px;
+}
+
+.link-card a {
+    color: var(--pink);
+    font-family: var(--font-ui);
+    font-size: 12px;
+}
+
+.link-card a:hover {
+    color: var(--cyan);
+}
+
+@media(max-width:1200px){
+
+    .project-page {
+        width: min(100% - 50px,var(--container));
+        padding: 60px 0;
+    }
+
+    .project-hero {
+        gap: 35px;
+    }
+
+    .project-intro h1 {
+        font-size: 60px;
+    }
+
+    .project-content {
+        margin-top: 70px;
+        gap: 30px;
+    }
+
+    .project-description,
+    .info-card,
+    .link-card {
+        padding: 25px;
+    }
+
+    .project-flow {
+        margin-top:70px;
+        gap:30px;
+    }
+
+    .project-flow p {
+        font-size:16px;
+    }
+
+    .link-card h3 {
+        font-size:28px;
+    }
+}
+
+@media(max-width:900px){
+
+    .project-header {
+        height:70px;
+        padding-inline:20px;
+    }
+
+    .project-header span {
+        font-size: 10px;
+    }
+
+    .project-page {
+        width: calc(100% - 30px);
+        padding: 40px 0;
+    }
+
+    .project-hero,
+    .project-content {
+        grid-template-columns: 1fr;
+    }
+
+    .project-image {
+        padding:10px;
+    }
+
+    .project-image img {
+        height:230px;
+        object-fit:cover;
+    }
+
+    .project-intro {
+        text-align:center;
+    }
+
+    .project-intro h1 {
+        font-size:42px;
+        line-height:.95;
+        margin:20px 0;
+    }
+
+    .project-intro span {
+        font-size:10px;
+    }
+
+    .project-intro p {
+        font-size:14px;
+    }
+
+    .project-flow {
+        display:none;
+    }
+
+    .project-flow img {
+        width:100%;
+        height:230px;
+        object-fit:cover;
+    }
+
+    .project-links {
+        margin-top:60px;
+        grid-template-columns: repeat(2,1fr);
+        gap:15px;
+    }
+
+    .link-card {
+        padding:20px;
+    }
+
+    .link-card h3 {
+        font-size:22px;
+        margin:10px 0;
+    }
+
+    .link-card p {
+        font-size:12px;
+        margin-bottom:20px;
+    }
+
+    .link-card span {
+        font-size:9px;
+    }
+
+    .link-card a {
+        font-size:10px;
+    }
+
+    .project-navigation {
+        margin-top:60px;
+    }
+    .next-project {
+        width:100%;
+        text-align:center;
+        padding:13px;
+        font-size:11px;
+    }
+}
+
+@media (max-width: 500px){
+
+    .project-page {
+        padding: 1rem;
+    }
+
+    .project-header {
+        padding: .8rem 1rem;
+    }
+
+    .project-header span {
+        font-size: .85rem;
+    }
+
+    .project-hero {
+        gap: 1rem;
+    }
+
+    .project-image img {
+        max-width: 260px;
+    }
+
+    .project-intro {
+
+        span {
+            font-size: .7rem;
+        }
+
+        h1 {
+            font-size: 2rem;
+        }
+
+        p {
+            font-size: .85rem;
+        }
+    }
+
+    .project-content {
+        padding: 1rem;
+        gap: 1rem;
+    }
+
+    .project-description {
+
+        h2 {
+            font-size: 1.3rem;
+        }
+
+        p, li {
+            font-size: .85rem;
+            line-height: 1.5;
+        }
+    }
+
+    .info-card {
+
+        padding: 1rem;
+
+        h3 {
+            font-size: .9rem;
+        }
+
+        li {
+            font-size: .8rem;
+        }
+    }
+
+    .project-flow {
+
+        padding: 1rem;
+
+        h2 {
+            font-size: 1.3rem;
+        }
+
+        p {
+            font-size: .85rem;
+        }
+
+        img {
+            max-width: 320px;
+        }
+    }
+}
