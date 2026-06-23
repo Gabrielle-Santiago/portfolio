@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <title> DOCUMENT_PROCESSOR_CORE</title>
+        <title>SYSTEM_DELIVERY_CORE</title>
 
         <link rel="icon" href="../../assets/images/icon/project.webp">
 
@@ -28,7 +28,146 @@
         </header>
 
         <main class="project-page">
-            <h1> EM CONSTRUÇÃO </h1>
+            <section class="project-hero">
+
+                <div class="project-image">
+                    <img src="../images/projects/delivery/product.webp" alt="System Delivery">
+                </div>
+
+                <div class="project-intro">
+
+                    <span>SYSTEM_MODULE</span>
+
+                    <h1>SYSTEM DELIVERY <strong>CORE</strong></h1><br>
+
+                    <p>
+                        Este Sistema de Pedidos de Delivery é uma aplicação full-stack desenvolvida com Spring Boot e
+                        Thymeleaf, focada no controle rigoroso de fluxos de acesso e segurança de dados.
+                    </p>
+                    <br>
+
+                    <p>
+                        O projeto se destaca pela implementação de regras de negócio complexas no ecossistema backend,
+                        incluindo um motor próprio de validação de transações financeiras utilizando o Algoritmo de Luhn
+                        e roteamento de controle de acesso via Cookies e JWT. Uma arquitetura Server-Side Rendering
+                        (SSR) robusta, performática e integrada ao PostgreSQL.
+                    </p>
+                </div>
+            </section>
+
+            <section class="project-content">
+                <div class="project-description">
+
+                    <h2>ABOUT_PROJECT</h2>
+
+                    <p>
+                        O desenvolvimento deste ecossistema focou na criação de validações nativas customizadas.
+                        Na camada de checkout, em vez de depender de bibliotecas externas, foi implementada uma classe
+                        de validação financeira que executa o Algoritmo de Luhn via código, combinada com Expressões
+                        Regulares (Regex) estruturadas em Switch Expressions modernas do Java para identificar
+                        instantaneamente bandeiras como Visa, Mastercard, Amex e Hipercard.
+                    </p>
+                    <br>
+
+                    <p>
+                        A arquitetura de segurança utiliza Spring Security + JWT de forma híbrida: após a autenticação,
+                        o perfil do usuário (Role) é armazenado em Cookies seguros. O servidor intercepta esses cookies
+                        para realizar um redirecionamento dinâmico na rota inicial (/home/admin ou /home/user),
+                        garantindo que o painel administrativo de CRUD de produtos fique totalmente isolado de acessos
+                        não autorizados.
+                    </p>
+                    <br>
+
+                    <p>
+                        É a tecnologia trabalhando para criar uma experiência de compra sem atritos, segura e blindada
+                        contra falhas.
+                    </p>
+                </div>
+
+                <div class="project-info">
+                    <div class="info-card">
+
+                        <h3>TECH_STACK</h3>
+
+                        <ul>
+                            <li>Java</li>
+                            <li>Spring Boot</li>
+                            <li>Spring Security + JWT</li>
+                            <li>PostgreSQL</li>
+                            <li>JPA / Hibernate</li>
+                            <li>Thymeleaf</li>
+                            <li>JavaScript</li>
+                            <li>API REST</li>
+                        </ul>
+                    </div>
+
+                    <div class="info-card">
+
+                        <h3>ARCHITECTURE</h3>
+
+                        <ul>
+                            <li>MVC Pattern</li>
+                            <li>Separação Controller / Service / Repository</li>
+                            <li>DTO Pattern</li>
+                            <li>Repository Pattern</li>
+                            <li>Camadas organizadas</li>
+                            <li>Tratamento global de erros</li>
+                        </ul>
+
+                    </div>
+                </div>
+            </section>
+
+            <section class="project-content">
+                <div class="project-description">
+
+                    <h2>FEATURES</h2>
+
+                    <ul>
+                        <li>→ Cadastro e autenticação de usuários</li><br>
+                        <li>→ Controle de acesso com JWT</li><br>
+                        <li>→ Diferenciação entre usuário e administrador</li><br>
+                        <li>→ CRUD completo de produtos</li><br>
+                        <li>→ Upload de imagens dos produtos</li><br>
+                        <li>→ Simulação de pagamento</li><br>
+                        <li>→ Validação de dados de cartão</li><br>
+                        <li>→ Envio automático de e-mails</li><br>
+                        <li>→ Tratamento padronizado de erros</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="project-flow">
+                <div>
+                    <h2>DATA_FLOW</h2>
+
+                    <p>
+                        <ul>
+                            <li>
+                                1. Identificação de Perfil: O usuário faz login e o sistema abre o painel correspondente
+                                (cardápio para o cliente ou controle de produtos para o dono).
+                            </li><br>
+
+                            <li>2. Envio do Pedido: O cliente escolhe os produtos e preenche os dados de pagamento na tela
+                                de fechamento da compra.
+                            </li><br>
+
+                            <li>
+                                3. Blindagem de Dados: O servidor analisa os dados do cartão nos bastidores, rejeitando
+                                erros de digitação de forma imediata.
+                            </li><br>
+
+                            <li>
+                                4. Alerta de Venda: A compra é confirmada, o estoque é atualizado e o proprietário recebe um
+                                alerta instantâneo por e-mail com os detalhes do pedido para iniciar o preparo.
+                            </li><br>
+                        </ul>
+                    </p>
+                </div>
+
+                <img src="../images/projects/delivery/product-view.webp" alt="Fluxo do projeto">
+            </section>
+
 
             <div class="project-navigation">
 
