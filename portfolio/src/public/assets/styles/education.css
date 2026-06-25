@@ -1,0 +1,110 @@
+.education {
+    padding: 100px 0;
+}
+
+.education-main {
+    margin-top: 60px;
+}
+
+.academic-card {
+    border: 2px solid var(--cyan);
+    padding: 40px;
+
+    background: rgba(0,240,255,.04);
+    position: relative;
+
+    box-shadow: var(--glow);
+}
+
+.academic-card::after {
+    content: "";
+    position: absolute;
+
+    width: 80px;
+    height: 3px;
+
+    background: var(--pink);
+    bottom: 0;
+    left: 0;
+}
+
+.academic-card span,
+.course-card span {
+    font-family: var(--font-ui);
+    font-size: 12px;
+    color: var(--cyan);
+}
+
+.academic-card h2 {
+    font-size: 55px;
+    margin: 20px 0;
+}
+
+.academic-card p {
+    color: var(--text-muted);
+    font-size: 18px;
+}
+
+.academic-card strong {
+    display: block;
+    margin-top: 20px;
+
+    color: var(--pink);
+    font-family: var(--font-ui);
+}
+
+.education-grid {
+    margin-top: 30px;
+
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 25px;
+}
+
+.course-card {
+    border: 1px solid var(--pink);
+    padding: 30px;
+
+    background: rgba(255,255,255,.02);
+    transition: .2s;
+}
+
+.course-card:hover {
+    transform: translate(-5px,-5px);
+    border-color: var(--cyan);
+    box-shadow: var(--glow);
+}
+
+.course-card h3 {
+    margin: 15px 0;
+    font-size: 25px;
+}
+
+.course-card p {
+    color: var(--text-muted);
+    font-size: 14px;
+}
+
+@media(max-width:900px) {
+
+    .education {
+        padding: 70px 0;
+    }
+
+    .academic-card {
+        padding: 25px;
+    }
+
+    .academic-card h2 {
+        font-size: 30px;
+        letter-spacing: 1px;
+    }
+
+    .education-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .course-card h3 {
+        font-size: 20px;
+    }
+}
