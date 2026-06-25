@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <title> DOCUMENT_PROCESSOR_CORE</title>
+        <title>GAME_CATOLOG_CORE</title>
 
         <link rel="icon" href="../../assets/images/icon/project.webp">
 
@@ -28,7 +28,183 @@
         </header>
 
         <main class="project-page">
-            <h1> EM CONSTRUÇÃO </h1>
+            <section class="project-hero">
+
+                <div class="project-image">
+                    <img src="../images/projects/game-catalog/game-card-front.webp" alt="Game Catolog" class="card-game-catalog">
+                </div>
+
+                <div class="project-intro">
+
+                    <span>SYSTEM_MODULE</span>
+
+                    <h1>GAME CATOLOG</h1><br>
+
+                    <p>
+                        Uma API projetada para centralizar e simplificar o acesso ao universo dos games. O sistema atua
+                        como uma ponte inteligente entre uma grande base de dados global (OpenCritic) e o usuário final,
+                        consolidando notas da crítica, plataformas e gêneros em um só lugar. Com um motor de busca
+                        dinâmico e endpoints rápidos, a plataforma transforma dados brutos da internet em uma
+                        experiência de catálogo fluida, informativa e rica em conteúdo.
+                    </p>
+                </div>
+            </section>
+
+            <section class="project-content">
+                <div class="project-description">
+
+                    <h2>ABOUT_PROJECT</h2>
+
+                    <p>
+                        O GameCatalog foi projetado para resolver um problema comum no desenvolvimento de software: a
+                        dependência de dados externos de terceiros. A camada Client gerencia as chamadas HTTP
+                        assíncronas para a API da OpenCritic. Os dados brutos recebidos são imediatamente mapeados por
+                        DTOs, garantindo que apenas as informações relevantes entrem no sistema, o que reduz o consumo
+                        de memória e o tráfego de rede.
+                    </p>
+                    <br>
+
+                    <p>
+                        A camada de Service orquestra as regras de negócio e correlaciona entidades como mesclar dados
+                        de plataformas e gêneros na rota detalhada do jogo. Por fim, as Controllers expõem esses dados
+                        tratados através de uma API REST limpa, documentada e com suporte a buscas customizadas por
+                        critérios de texto, garantindo total isolamento entre a API externa e o cliente final.
+                    </p>
+                </div>
+
+                <div class="project-info">
+                    <div class="info-card">
+
+                        <h3>TECH_STACK</h3>
+
+                        <ul>
+                            <li>Java</li>
+                            <li>Spring Boot</li>
+                            <li>REST API</li>
+                            <li>OpenCritic API</li>
+                            <li>DTO Pattern</li>
+                            <li>HTTP Client</li>
+                            <li>JSON Processing</li>
+                            <li>Swagger</li>
+                        </ul>
+                    </div>
+
+                    <div class="info-card">
+
+                        <h3>ARCHITECTURE</h3>
+
+                        <ul>
+                            <li>Arquitetura em camadas</li>
+                            <li>Separação de responsabilidades</li>
+                            <li>Controller / Service / Client</li>
+                            <li>Data Transfer Object</li>
+                            <li>Integração externa isolada</li>
+                        </ul>
+
+                    </div>
+                </div>
+            </section>
+
+            <section class="project-content">
+                <div class="project-description">
+
+                    <h2>FEATURES</h2>
+
+                    <ul>
+                        <li>→ Consulta de gêneros</li><br>
+
+                        <li>→ Detalhes completos do jogo</li><br>
+
+                        <li>→ Consumo de API externa</li><br>
+
+                        <li>→ Mapeamento de dados externos</li><br>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="project-flow">
+                <div>
+                    <h2>DATA_FLOW</h2>
+
+                    <p>
+                    <ul>
+                        <li>
+                            1. Ação do Usuário: O usuário pesquisa um jogo ou clica em uma categoria no catálogo.
+                        </li><br>
+
+                        <li>
+                            2. Gatilho no Backend: O sistema recebe o pedido e busca a informação precisa.
+                        </li><br>
+
+                        <li>
+                            3. Consulta Externa: A nossa API conversa com a base de dados da OpenCritic em segundos para coletar as notas e análises.
+                        </li><br>
+
+                        <li>
+                            4. Filtragem Inteligente: O sistema joga fora os dados desnecessários trazidos da internet e
+                            organiza apenas o que o usuário quer ver.
+                        </li><br>
+
+                        <li>
+                            5. Exibição: A tela exibe o jogo com suas respectivas notas, plataformas e descrições de forma rápida e organizada.
+                        </li>
+                    </ul>
+                    </p>
+                </div>
+
+                <img src="../images/projects/game-catalog/game-card-back.webp" alt="Fluxo do projeto" class="card-game-catalog">
+            </section>
+
+
+            <section class="project-content">
+                <div class="project-description">
+
+                    <h2>USER_FLOW</h2>
+
+                    <ul>
+                        <li>
+                            1. Exploração do Catálogo: O usuário acessa a plataforma e visualiza instantaneamente uma
+                            lista resumida dos principais jogos com suas respectivas notas da crítica
+                        </li><br>
+
+                        <li>
+                            2. Busca Dinâmica: O usuário digita o nome de um jogo específico no campo de pesquisa,
+                            ativando uma filtragem inteligente em tempo real.
+                        </li><br>
+
+                        <li>
+                            3. Raio-X do Jogo: Ao clicar em um título, o sistema busca e unifica todos os detalhes
+                            fundamentais, como sinopse, gêneros e em quais consoles ele está disponível.
+                        </li><br>
+
+                        <li>
+                            4. Consumo de Informação Integrado: O usuário navega por uma base global de dados de forma
+                            centralizada, rápida e sem precisar sair da aplicação.
+                        </li><br>
+                    </ul>
+                    </p>
+                </div>
+
+            </section>
+
+            <section class="project-links">
+                <div class="link-card">
+
+                    <span>SOURCE_CODE</span>
+
+                    <h3>
+                        GitHub
+                    </h3>
+
+                    <p>
+                        Código fonte completo,
+                        estrutura e implementação
+                        do projeto.
+                    </p>
+
+                    <a href="https://github.com/Gabrielle-Santiago/GameCatolog" target="_blank">ACCESS_REPOSITORY →</a>
+                </div>
+            </section>
 
             <div class="project-navigation">
 

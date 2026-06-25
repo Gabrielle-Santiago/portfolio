@@ -183,6 +183,10 @@
     color: var(--cyan);
 }
 
+.card-game-catalog {
+    height: 400px;
+}
+
 @media(max-width:1200px){
 
     .project-page {
