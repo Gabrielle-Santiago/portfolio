@@ -112,7 +112,7 @@
         justify-content: flex-end;
 }
 
-.next-project {
+.next-project, .back-project {
         border: 2px solid var(--cyan);
         padding: 15px 35px;
 
@@ -124,6 +124,12 @@
 }
 
 .next-project:hover {
+    background: var(--cyan);
+    color: var(--bg);
+    box-shadow: var(--glow);
+}
+
+.back-project:hover {
     background: var(--cyan);
     color: var(--bg);
     box-shadow: var(--glow);
@@ -186,6 +192,17 @@
 .card-game-catalog {
     height: 400px;
 }
+
+.project-navigation {
+
+    margin-top:100px;
+
+    display:flex;
+    justify-content:space-between;
+
+    gap:20px;
+}
+
 
 @media(max-width:1200px){
 
@@ -316,7 +333,8 @@
     .project-navigation {
         margin-top:60px;
     }
-    .next-project {
+
+    .next-project, .back-project {
         width:100%;
         text-align:center;
         padding:13px;
