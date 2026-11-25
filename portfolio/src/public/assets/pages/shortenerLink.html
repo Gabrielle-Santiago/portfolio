@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>LINK_SHORTENER</title>
+
+        <link rel="icon" href="../../assets/images/icon/project.webp">
+
+        <link rel="stylesheet" href="../../assets/styles/header.css">
+        <link rel="stylesheet" href="../../assets/styles/reset.css">
+        <link rel="stylesheet" href="../../assets/styles/variables.css">
+        <link rel="stylesheet" href="../../assets/styles/global.css">
+        <link rel="stylesheet" href="../../assets/styles/project-page.css">
+        <link rel="stylesheet" href="../../assets/styles/footer.css">
+    </head>
+
+    <body>
+        <header class="project-header">
+            <a href="../../index.html">← BACK</a>
+            <span>PROJECT_LINK_SHORTENER.exe</span>
+
+            <nav class="navigation">
+                <a class="active" href="../../index.html">Home</a>
+                <a href="../../assets/pages/education.html">Educação</a>
+            </nav>
+        </header>
+
+        <main class="project-page">
+
+            <section class="project-hero">
+
+                <div class="project-image">
+                    <img src="../images/projects/shotener-link/shotenerLink.webp" alt="Link Shortener">
+                    <a href="https://linkshortener-eight.vercel.app/" target="_blank" rel="noopener noreferrer" class="demo-overlay">
+                        <span>DEMO</span>
+                    </a>
+                </div>
+
+                <div class="project-intro">
+
+                    <span>SYSTEM_MODULE</span>
+
+                    <h1>LINK <strong>SHORTENER</strong></h1><br>
+
+                    <p>
+                        Uma aplicação desenvolvida para simplificar o compartilhamento de URLs
+                        através da criação de links curtos e práticos. Construído com Java e
+                        Spring Boot, o projeto utiliza uma API REST para processar solicitações,
+                        gerar identificadores únicos e disponibilizar redirecionamentos para
+                        os endereços originais.
+                    </p>
+                    <br>
+
+                    <p>
+                        Além do encurtamento, a aplicação oferece geração de QR Codes,
+                        permitindo transformar links encurtados em imagens que podem ser
+                        facilmente compartilhadas e acessadas por dispositivos móveis.
+                    </p>
+
+                </div>
+            </section>
+
+            <section class="project-content">
+                <div class="project-description">
+
+                    <h2>ABOUT_PROJECT</h2>
+
+                    <p>
+                        O sistema recebe uma URL informada pelo usuário e realiza o
+                        processamento no backend, gerando um código curto associado
+                        ao endereço original. A partir desse identificador, a aplicação
+                        disponibiliza uma URL reduzida que pode ser utilizada para
+                        acessar o redirecionamento.
+                    </p>
+                    <br>
+
+                    <p>
+                        O projeto também conta com um módulo de geração de QR Code
+                        utilizando a biblioteca ZXing. A imagem é produzida a partir do link encurtado, sem a necessidade de manter uma entidade ou persistir o arquivo no banco de dados.
+                    </p>
+                    <br>
+
+                    <p>
+                        A solução integra processamento de dados, persistência e
+                        comunicação entre frontend e backend, mantendo a aplicação
+                        organizada e com responsabilidades separadas.
+                    </p>
+
+                </div>
+
+                <div class="project-info">
+                    <div class="info-card">
+
+                        <h3>TECH_STACK</h3>
+
+                        <ul>
+                            <li>Java</li>
+                            <li>Spring Boot</li>
+                            <li>Spring Web</li>
+                            <li>MongoDB</li>
+                            <li>ZXing</li>
+                            <li>Maven</li>
+                            <li>API REST</li>
+                        </ul>
+
+                    </div>
+
+                    <div class="info-card">
+
+                        <h3>ARCHITECTURE</h3>
+
+                        <ul>
+                            <li>Separação de responsabilidades</li>
+                            <li>Arquitetura em camadas</li>
+                            <li>Organização de serviços</li>
+                            <li>Repository Pattern</li>
+                            <li>Comunicação REST</li>
+                        </ul>
+
+                    </div>
+                </div>
+            </section>
+
+            <section class="project-content">
+                <div class="project-description">
+
+                    <h2>FEATURES</h2>
+
+                    <ul>
+                        <li>→ Encurtamento de URLs</li><br>
+
+                        <li>→ Geração de códigos curtos</li><br>
+
+                        <li>→ Redirecionamento para URLs originais</li><br>
+
+                        <li>→ Persistência de informações no MongoDB</li><br>
+
+                        <li>→ Geração de QR Codes utilizando ZXing</li><br>
+
+                        <li>→ Cópia do link encurtado</li><br>
+                    </ul>
+
+                </div>
+            </section>
+
+            <section class="project-flow">
+                <div>
+                    <h2>DATA_FLOW</h2>
+
+                    <p>
+                        <ul>
+                            <li>
+                                1. Entrada da URL (Frontend): O usuário informa o endereço
+                                original através do campo de entrada e solicita o
+                                encurtamento.
+                            </li><br>
+
+                            <li>
+                                2. Requisição HTTP (API): O frontend envia uma requisição
+                                POST para o backend Spring Boot contendo a URL original.
+                            </li><br>
+
+                            <li>
+                                3. Processamento (Backend): A aplicação processa a
+                                solicitação, gera um código curto e associa esse código
+                                ao endereço original.
+                            </li><br>
+
+                            <li>
+                                4. Persistência (MongoDB): As informações necessárias
+                                para o redirecionamento são armazenadas no banco de dados.
+                            </li><br>
+
+                            <li>
+                                5. Retorno (API): O backend retorna o código curto,
+                                permitindo que o frontend apresente o link reduzido.
+                            </li><br>
+
+                            <li>
+                                6. Redirecionamento: Ao acessar o link curto, a aplicação
+                                recupera o endereço original e redireciona o usuário.
+                            </li><br>
+
+                            <li>
+                                7. Geração de QR Code: Quando solicitado, o backend
+                                utiliza a biblioteca ZXing para gerar uma imagem PNG
+                                contendo o link encurtado.
+                            </li>
+                        </ul>
+                    </p>
+                </div>
+
+                <img src="../images/projects/shotener-link/qrCode.webp" alt="Fluxo do projeto">
+            </section>
+
+            <section class="project-content frontend-section">
+                <div class="project-description">
+
+                    <h2>FRONTEND_MODULE</h2>
+
+                    <p>
+                        A interface foi desenvolvida utilizando HTML, CSS e JavaScript,
+                        com foco em simplicidade e facilidade de utilização. O usuário
+                        pode informar uma URL, solicitar seu encurtamento e visualizar
+                        o resultado sem precisar recarregar a página.
+                    </p>
+                    <br>
+
+                    <p>
+                        Após o processamento, ficam disponíveis as opções de copiar
+                        o link encurtado e gerar um QR Code. O campo de entrada permanece
+                        editável e permite realizar novas solicitações tanto pelo botão
+                        quanto pela tecla Enter.
+                    </p>
+
+                </div>
+
+                <div class="project-info">
+                    <div class="info-card">
+
+                        <h3>FRONTEND_STACK</h3>
+
+                        <ul>
+                            <li>HTML5</li>
+                            <li>CSS3</li>
+                            <li>JavaScript</li>
+                            <li>Fetch API</li>
+                            <li>Web APIs</li>
+                        </ul>
+
+                    </div>
+
+                    <div class="info-card">
+
+                        <h3>FRONTEND_FEATURES</h3>
+
+                        <ul>
+                            <li>Interface responsiva</li>
+                            <li>Requisições assíncronas</li>
+                            <li>Manipulação do DOM</li>
+                            <li>Cópia para área de transferência</li>
+                            <li>Visualização de QR Code</li>
+                            <li>Atualização dinâmica da interface</li>
+                        </ul>
+
+                    </div>
+                </div>
+            </section>
+
+            <section class="project-content">
+                <div class="project-description">
+
+                    <h2>USER_FLOW</h2>
+
+                    <p>
+                        A interação foi projetada para manter o processo direto e
+                        intuitivo, permitindo que o usuário escolha como deseja
+                        executar cada operação:
+                    </p>
+                    <br>
+
+                    <p>
+                        <ul>
+                            <li>
+                                1. Inserção: O usuário informa a URL que deseja encurtar.
+                            </li><br>
+
+                            <li>
+                                2. Solicitação: O usuário pressiona Enter ou clica no
+                                botão para enviar a requisição ao backend.
+                            </li><br>
+
+                            <li>
+                                3. Resultado: O link encurtado é disponibilizado na
+                                interface após o processamento.
+                            </li><br>
+
+                            <li>
+                                4. Compartilhamento: O usuário pode copiar o endereço
+                                reduzido ou gerar um QR Code.
+                            </li><br>
+
+                            <li>
+                                5. Nova operação: O campo permanece editável,
+                                permitindo informar outra URL e iniciar um novo
+                                encurtamento.
+                            </li>
+                        </ul>
+                    </p>
+
+                </div>
+
+                <div class="project-description">
+
+                    <h2>BACKEND_FEATURES</h2>
+
+                    <ul>
+                        <li>→ API REST com Spring Boot</li><br>
+                        <li>→ Processamento de requisições HTTP</li><br>
+                        <li>→ Geração de identificadores curtos</li><br>
+                        <li>→ Persistência com MongoDB</li><br>
+                        <li>→ Redirecionamento de URLs</li><br>
+                        <li>→ Geração de imagens PNG com ZXing</li><br>
+                        <li>→ Retorno de imagens através de endpoints HTTP</li>
+                    </ul>
+
+                </div>
+            </section>
+
+            <section class="project-links">
+                <div class="link-card">
+
+                    <span>SOURCE_CODE</span>
+
+                    <h3>GitHub</h3>
+
+                    <p>
+                        Código fonte, estrutura e implementação
+                        do encurtador de URLs.
+                    </p>
+
+                    <a href="https://github.com/Gabrielle-Santiago/linkShortener" target="_blank" rel="noopener noreferrer">ACCESS_REPOSITORY →</a>
+
+                </div>
+            </section>
+
+            <div class="project-navigation">
+                <a href="../../assets/pages/ecommerce.html" class="back-project">← BACK_PROJECT</a>
+                <a href="../../assets/pages/gamecatalog.html" class="next-project">NEXT_PROJECT →</a>
+
+            </div>
+        </main>
+
+        <footer id="contact" class="footer">
+            <div>
+                <h2>NEON_PROTOCOL</h2>
+                <p>BACKEND_DEV</p>
+            </div>
+
+            <nav>
+                <a href="https://wa.me/557388157665" target="_blank">WhatsApp</a>
+                <a href="https://github.com/Gabrielle-Santiago" target="_blank">GitHub</a>
+                <a href="https://www.linkedin.com/in/gabrielle-santiago-silva/" target="_blank">LinkedIn</a>
+                <a href="mailto:gabriellesantisilva@gmail.com" target="_blank">Email</a>
+            </nav>
+
+            <button>REPORT_SYS_ERROR</button>
+
+        </footer>
+    </body>
+</html>
